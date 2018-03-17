@@ -78,3 +78,39 @@ body{
 	border-radius: 2px;
 	font-family: "museo700";
 }
+.footerBlock{
+	background-color:#000;
+	color: #999999;
+	font-size: 12px;
+	font-family: "museo300";
+}
+.footerBlock a{
+	color: #999999;
+}
+.footerBlock .contentBlock{
+	padding: 25px 25px 35px 25px;
+	border-top: 1px solid rgba(255,255,255,0.25);
+}
+.footerBlock .copyrightBlock{
+	max-width: 185px;
+	line-height: 1.8;
+}
+.footerBlock .partnerShip a{
+	font-size: 14px;
+	text-decoration: underline;
+}
+.footerBlock .socialLinks .item{
+	padding: 0 16px;
+}
+.footerBlock .socialLinks .item .logoBlock{
+	margin-bottom: 10px;
+}
+.footerBlock .socialLinks .item:first-child{
+	padding-left: 0;
+}
+.footerBlock .socialLinks .item:last-child{
+	padding-right: 0;
+}
+.footerBlock .madeByBlock{
+	text-align: center;
+}

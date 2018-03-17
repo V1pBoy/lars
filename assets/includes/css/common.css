@@ -1,3 +1,7 @@
+a{
+	text-decoration: none;
+	display: block;
+}
 .container{
 	max-width: 1340px;
 	margin: 0 auto;
@@ -26,6 +30,6 @@
 .inlineBlock{
 	display: inline-block;
 }
-.alignMiddle{
+.inlineBlock.alignMiddle{
 	vertical-align: middle;
 }
