@@ -1,0 +1,80 @@
+body{
+	font-family: "museo500";
+}
+.headerBlock{
+	padding: 34px 0 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	text-transform: uppercase;
+}
+.headerBlock a{
+	color: #fff;
+	text-decoration: none;
+}
+.headerBlock .contentBlock{
+	padding: 0 95px 0 40px;
+}
+.headerBlock .logoLanguageBlock{
+	font-family: "museo700";
+}
+.headerBlock .logoLanguageBlock ul{
+	display: none;
+}
+.headerBlock .logoLanguageBlock ul>li{
+	margin-bottom: 10px;
+}
+.headerBlock .logoLanguageBlock ul>li:hover{
+	opacity: 0.3;
+	cursor: pointer;
+}
+.headerBlock .logoLanguageBlock ul>li:last-child{
+	margin-bottom: 0;
+}
+.headerBlock .languageBlock.open ul{
+	display: block;
+	position: absolute;
+	background: #000;
+	width: 100%;
+	padding: 10px 0 10px 10px;
+	border: 1px solid rgba(249, 249, 249, 0.1);
+	border-top: none;
+}
+.headerBlock .logoLanguageBlock .languageBlock{
+	position: relative;
+	color: #fff;
+	font-size: 10px;
+}
+.headerBlock .logoLanguageBlock .currentLanguage{
+	padding: 10px 0 10px 10px;
+	width: 52px;
+	background-color: #000;
+	border: 1px solid rgba(249, 249, 249, 0.1);
+}
+.headerBlock .listMenu{
+	font-size: 12px;
+	letter-spacing: 1.2px;
+	font-family: "museo300";
+}
+.headerBlock .listMenu>li{
+	padding: 0 29px;
+}
+.headerBlock .listMenu>li:first-child{
+	padding-left: 0;
+}
+.headerBlock .listMenu>li:last-child{
+	padding-right: 0;
+}
+.headerBlock .listMenu>li>a{
+	opacity: 0.5;
+}
+.headerBlock .loginBtn a{
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	text-align: center;
+	padding: 6px 5px;
+	min-width: 74px;
+	font-size: 9px;
+	display: block;
+	border-radius: 2px;
+	font-family: "museo700";
+}
