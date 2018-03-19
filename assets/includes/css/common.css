@@ -6,6 +6,7 @@ a{
 	max-width: 1340px;
 	padding: 0 30px;
 	margin: 0 auto;
+	overflow-x: hidden;
 }
 .flexWrapper{
 	display: -webkit-box;
@@ -45,9 +46,23 @@ a{
 .inlineBlock.alignMiddle{
 	vertical-align: middle;
 }
+.borderTopGray{
+	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
 @media only screen and (min-width : 768px) and (max-width : 1199px){
+	.container{
+		padding: 0 25px;
+	}
 	.flexWrapper.wrapTablet{
 		display: -webkit-flex;
 		flex-wrap: wrap;
+	}
+}
+@media(max-width: 767px){
+	.container{
+		padding: 0 15px;
+	}
+	.borderNoneMob{
+		border: none;
 	}
 }

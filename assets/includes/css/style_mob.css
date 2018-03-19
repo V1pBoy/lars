@@ -1,0 +1,75 @@
+@media (max-width: 767px){
+	.featuresBlock{
+		padding: 50px 0;
+	}
+	.featuresBlock .contentBlock{
+		margin: 0 -10px;
+	}
+	.featuresBlock .titleBlock{
+		font-size: 24px;
+		margin-bottom: 31px;
+	}
+	.featuresBlock .flexItem{
+		padding: 0 10px;
+	}
+	.featuresBlock .titleItem{
+		font-size: 14px;
+	}
+	.featuresBlock .descriptionItem{
+		font-size: 12px;
+	}
+	.contactUsBlock {
+		background-position: calc(100% + 650px) center;
+	}
+	.contactUsBlock .contentBlock{
+		padding: 60px 0 10px;
+	}
+	.contactUsBlock .itemFlex{
+		flex-basis: 100%;
+	}
+	.contactUsBlock .address, .contactUsBlock .communication{
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	.contactUsBlock .address .content{
+		margin: 0 auto;
+		font-size: 14px;
+	}
+	.contactUsBlock .titleBlock{
+		font-size: 24px;
+		margin-bottom: 15px;
+	}
+	.contactUsBlock .communication .content{
+		margin-bottom: 10px;
+	}
+	.footerBlock .contentBlock{
+		padding: 0 0 34px;
+	}
+	.footerBlock .copyrightBlock{
+		order: 3;
+		flex-basis: 63%;
+	}
+	.footerBlock .partnerShip{
+		order: 2;
+		flex-basis: 100%;
+		text-align: center;
+		margin: 25px 0 34px;
+	}
+	.footerBlock .socialLinks{
+		flex-basis: 100%;
+		text-align: center;
+		padding: 13px 0;
+		border-top: 1px solid rgba(255, 255, 255, 0.25);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+	}
+	.footerBlock .socialLinks .item .logoBlock{
+		margin-bottom: 0;
+	}
+	.footerBlock .socialLinks .item .titleBlock{
+		display: none;
+	}
+	.footerBlock .madeByBlock{
+		order: 4;
+		flex-basis: 37%;
+	}
+}

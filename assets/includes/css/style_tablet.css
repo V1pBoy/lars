@@ -1,4 +1,20 @@
-@media (max-width: 992px){
+@media(max-width: 1199px){
+	.contactUsBlock{
+		background-position: calc(100% + 700px) -50px;
+	}
+}
+@media (max-width: 991px){
+	.featuresBlock .flexItem{
+		flex-basis: 50%;
+	}
+	.contactUsBlock .contentBlock{
+		padding: 150px 0 100px;
+	}
+	.contactUsBlock .address, .contactUsBlock .communication{
+		flex-basis: 100%;
+		margin-bottom: 50px;
+		padding-left: 0;
+	}
 	.footerBlock .socialLinks .item{
 		padding: 0 5px;
 	}
