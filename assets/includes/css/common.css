@@ -4,6 +4,7 @@ a{
 }
 .container{
 	max-width: 1340px;
+	padding: 0 30px;
 	margin: 0 auto;
 }
 .flexWrapper{
@@ -11,6 +12,17 @@ a{
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+}
+.flexWrapper.wrap{
+	display: -webkit-flex;
+	flex-wrap: wrap;
+}
+.flexWrapper.centerContent{
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 .flexWrapper.justifyContent{
 	-webkit-box-pack: space-between;
@@ -32,4 +44,10 @@ a{
 }
 .inlineBlock.alignMiddle{
 	vertical-align: middle;
+}
+@media only screen and (min-width : 768px) and (max-width : 1199px){
+	.flexWrapper.wrapTablet{
+		display: -webkit-flex;
+		flex-wrap: wrap;
+	}
 }

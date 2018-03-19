@@ -1,37 +1,50 @@
-body{
+body {
 	font-family: "museo500";
+	background: #000;
+	color: #fff;
+	font-size: 14px;
 }
-.headerBlock{
+
+/*Header Style Begin*/
+.headerBlock {
 	padding: 34px 0 0;
 	position: absolute;
 	top: 0;
 	width: 100%;
 	text-transform: uppercase;
 }
-.headerBlock a{
+
+.headerBlock a {
 	color: #fff;
 	text-decoration: none;
 }
-.headerBlock .contentBlock{
+
+.headerBlock .contentBlock {
 	padding: 0 95px 0 40px;
 }
-.headerBlock .logoLanguageBlock{
+
+.headerBlock .logoLanguageBlock {
 	font-family: "museo700";
 }
-.headerBlock .logoLanguageBlock ul{
+
+.headerBlock .logoLanguageBlock ul {
 	display: none;
 }
-.headerBlock .logoLanguageBlock ul>li{
+
+.headerBlock .logoLanguageBlock ul > li {
 	margin-bottom: 10px;
 }
-.headerBlock .logoLanguageBlock ul>li:hover{
+
+.headerBlock .logoLanguageBlock ul > li:hover {
 	opacity: 0.3;
 	cursor: pointer;
 }
-.headerBlock .logoLanguageBlock ul>li:last-child{
+
+.headerBlock .logoLanguageBlock ul > li:last-child {
 	margin-bottom: 0;
 }
-.headerBlock .languageBlock.open ul{
+
+.headerBlock .languageBlock.open ul {
 	display: block;
 	position: absolute;
 	background: #000;
@@ -40,35 +53,43 @@ body{
 	border: 1px solid rgba(249, 249, 249, 0.1);
 	border-top: none;
 }
-.headerBlock .logoLanguageBlock .languageBlock{
+
+.headerBlock .logoLanguageBlock .languageBlock {
 	position: relative;
 	color: #fff;
 	font-size: 10px;
 }
-.headerBlock .logoLanguageBlock .currentLanguage{
+
+.headerBlock .logoLanguageBlock .currentLanguage {
 	padding: 10px 0 10px 10px;
 	width: 52px;
 	background-color: #000;
 	border: 1px solid rgba(249, 249, 249, 0.1);
 }
-.headerBlock .listMenu{
+
+.headerBlock .listMenu {
 	font-size: 12px;
 	letter-spacing: 1.2px;
 	font-family: "museo300";
 }
-.headerBlock .listMenu>li{
+
+.headerBlock .listMenu > li {
 	padding: 0 29px;
 }
-.headerBlock .listMenu>li:first-child{
+
+.headerBlock .listMenu > li:first-child {
 	padding-left: 0;
 }
-.headerBlock .listMenu>li:last-child{
+
+.headerBlock .listMenu > li:last-child {
 	padding-right: 0;
 }
-.headerBlock .listMenu>li>a{
+
+.headerBlock .listMenu > li > a {
 	opacity: 0.5;
 }
-.headerBlock .loginBtn a{
+
+.headerBlock .loginBtn a {
 	border: 2px solid rgba(255, 255, 255, 0.5);
 	text-align: center;
 	padding: 6px 5px;
@@ -78,39 +99,131 @@ body{
 	border-radius: 2px;
 	font-family: "museo700";
 }
-.footerBlock{
-	background-color:#000;
+
+/*Header Style End*/
+
+.featuresBlock {
+	padding: 200px 0 160px;
+	background: #fff;
+	color: #585858;
+	text-align: center;
+}
+.featuresBlock .contentBlock{
+	margin: 0 -50px;
+	overflow: hidden;
+}
+.featuresBlock .titleBlock {
+	font-size: 36px;
+	color: #e80000;
+	font-family: "museo700";
+	max-width: 550px;
+	margin: 0 auto 110px;
+}
+
+.featuresBlock .flexItem {
+	flex-basis: 25%;
+	padding: 0 50px;
+}
+
+.featuresBlock .svgBlock{
+	margin-bottom: 40px;
+}
+.featuresBlock .titleItem{
+	font-size: 24px;
+	font-family: "museo700";
+	margin-bottom: 25px;
+}
+
+/*Contact us Style Begin*/
+.contactUsBlock {
+	color: #ffffff;
+	font-family: "museo300";
+	font-size: 20px;
+}
+
+.contactUsBlock .contentBlock {
+	background: url(../../img/bgContactUs.jpg) 231px center no-repeat;
+	background-size: contain;
+	padding: 217px 0 275px;
+}
+
+.contactUsBlock .itemFlex {
+	flex-basis: 50%;
+}
+
+.contactUsBlock .address,
+.contactUsBlock .communication {
+	padding-left: 20px;
+	line-height: 1.4;
+}
+
+.contactUsBlock .titleBlock {
+	color: #e80000;
+	font-family: "museo700";
+	margin-bottom: 70px;
+	font-size: 36px;
+}
+
+.contactUsBlock .address .content {
+	max-width: 340px;
+}
+
+.contactUsBlock .communication .content {
+	margin-bottom: 30px;
+}
+
+.contactUsBlock .nameCommunication {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+/*Contact Us Style End*/
+
+/*Footer Style Begin*/
+.footerBlock {
+	background-color: #000;
 	color: #999999;
 	font-size: 12px;
 	font-family: "museo300";
 }
-.footerBlock a{
+
+.footerBlock a {
 	color: #999999;
 }
-.footerBlock .contentBlock{
+
+.footerBlock .contentBlock {
 	padding: 25px 25px 35px 25px;
-	border-top: 1px solid rgba(255,255,255,0.25);
+	border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
-.footerBlock .copyrightBlock{
+
+.footerBlock .copyrightBlock {
 	max-width: 185px;
 	line-height: 1.8;
 }
-.footerBlock .partnerShip a{
+
+.footerBlock .partnerShip a {
 	font-size: 14px;
 	text-decoration: underline;
 }
-.footerBlock .socialLinks .item{
+
+.footerBlock .socialLinks .item {
 	padding: 0 16px;
 }
-.footerBlock .socialLinks .item .logoBlock{
+
+.footerBlock .socialLinks .item .logoBlock {
 	margin-bottom: 10px;
 }
-.footerBlock .socialLinks .item:first-child{
+
+.footerBlock .socialLinks .item:first-child {
 	padding-left: 0;
 }
-.footerBlock .socialLinks .item:last-child{
+
+.footerBlock .socialLinks .item:last-child {
 	padding-right: 0;
 }
-.footerBlock .madeByBlock{
+
+.footerBlock .madeByBlock {
 	text-align: center;
 }
+
+/*Footer Style End*/
