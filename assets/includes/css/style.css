@@ -226,5 +226,29 @@ body {
 .footerBlock .madeByBlock {
 	text-align: center;
 }
-
 /*Footer Style End*/
+.ourTeamBlock .whiteBlock{
+	background: url(../../img/teamMembers.jpg) no-repeat center bottom #fff;
+}
+.ourTeamBlock .contentBlock{
+	padding-bottom: 419px;
+	padding-top: 62px;
+}
+.ourTeamBlock .blackBlock {
+	padding: 40px 0 35px;
+}
+.ourTeamBlock .flexItem{
+	text-align: center;
+	flex-basis: 162px;
+}
+.ourTeamBlock .nameMember{
+	font-size: 16px;
+	font-family: "museo700";
+	margin-bottom: 25px;
+	color: #bebebe;
+}
+.ourTeamBlock .memberPosition{
+	font-size: 12px;
+	color: #8c8c8c;
+	font-family: "museo300";
+}
