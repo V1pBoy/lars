@@ -107,6 +107,7 @@ body {
 	background: #fff;
 	color: #585858;
 	text-align: center;
+	overflow: hidden;
 }
 .featuresBlock .contentBlock{
 	margin: 0 -50px;
@@ -126,14 +127,21 @@ body {
 }
 
 .featuresBlock .svgBlock{
-	margin-bottom: 40px;
+	height: 196px;
+	width: 196px;
+	margin: 0 auto 40px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 100px;
 }
 .featuresBlock .titleItem{
 	font-size: 24px;
 	font-family: "museo700";
 	margin-bottom: 25px;
 }
-
+.featuresBlock .svgBlock svg{
+	max-height: 118px;
+	width: 90px;
+}
 /*Contact us Style Begin*/
 .contactUsBlock {
 	color: #ffffff;
@@ -176,7 +184,6 @@ body {
 	font-size: 14px;
 	margin-bottom: 5px;
 }
-
 /*Contact Us Style End*/
 
 /*Footer Style Begin*/
@@ -204,7 +211,14 @@ body {
 	font-size: 14px;
 	text-decoration: underline;
 }
-
+.footerBlock .partnerShip .logoBlock{
+	margin-right: 5px;
+}
+.footerBlock .partnerShip svg{
+	width: 26px;
+	height: 21px;
+	fill: rgba(255,255,255,0.6);
+}
 .footerBlock .socialLinks .item {
 	padding: 0 16px;
 }
@@ -233,6 +247,21 @@ body {
 .ourTeamBlock .contentBlock{
 	padding-bottom: 419px;
 	padding-top: 62px;
+	text-align: center;
+}
+.ourTeamBlock .contentBlock .titleBlock{
+	color: #e80000;
+	font-size: 36px;
+	font-family: "museo700";
+	margin-bottom: 25px;
+}
+.ourTeamBlock .contentBlock .descriptionBlock{
+	max-width: 920px;
+	color: #585858;
+	font-family: "museo300";
+	font-size: 17px;
+	margin: 0 auto;
+	line-height: 1.5;
 }
 .ourTeamBlock .blackBlock {
 	padding: 40px 0 35px;
@@ -250,5 +279,471 @@ body {
 .ourTeamBlock .memberPosition{
 	font-size: 12px;
 	color: #8c8c8c;
+	font-family: "museo300";
+}
+.ourTeamBlock .askBlock{
+	padding-top: 30px;
+	padding-bottom: 40px;
+	text-align: center;
+}
+.ourTeamBlock .askBlock a{
+	border-radius: 2px;
+	background-color: #ffffff;
+	font-size: 12px;
+	font-family: "museo700";
+	color: #585858;
+	padding: 14px 46px;
+	text-transform: uppercase;
+}
+
+.ourClients{
+	padding: 157px 0 137px;
+	position: relative;
+}
+.ourClients .titleBlock{
+	font-size: 36px;
+	color: #e80000;
+	font-family: "museo700";
+	line-height: 1.5;
+	margin-bottom: 55px;
+	text-align: center;
+}
+.ourClients .ourClientsCarousel{
+	margin-bottom: 60px;
+}
+.ourClients .ourClientsCarousel .clientBlock{
+	width: 125px;
+	margin: 0 auto 50px;
+}
+
+.ourClients .ourClientsCarousel .logoClient img{
+	width: 100%;
+}
+.ourClients .sliderNavigation{
+	max-width: 316px;
+	position: relative;
+	margin: 0 auto;
+}
+.ourClients .sliderNavigation:before{
+	content:"";
+	position: absolute;
+	width: 100%;
+	top:50%;
+	margin-top: -1px;
+	height: 1px;
+	background-color:#404040;
+}
+.ourClients .sliderNavigation .elementNav{
+	height: 11px;
+	width: 11px;
+	position: relative;
+	left: 70px;
+	cursor: pointer;
+	background: #fff;
+	border-radius: 50px;
+}
+.openClient{
+	display: none;
+	top:0;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,.9);
+	z-index: 999;
+}
+.openClient .contentBlock{
+	padding: 25px 25px 100px 100px;
+	border:1px solid #333333;
+}
+.openClient .closeBtn{
+	text-align: right;
+	color: #fff;
+	opacity: 0.2;
+	cursor: pointer;
+}
+.openClient .closeBtn svg{
+	height: 25px;
+	width: 25px;
+	fill:currentColor;
+}
+.openClient .imbBlock{
+	flex-basis: 439px;
+}
+.openClient .imbBlock img{
+	max-width: 100%;
+}
+.openClient .textBlock{
+	flex-basis: 738px;
+	padding-right: 46px;
+	padding-left: 78px;
+}
+.openClient .headerTextBlock{
+	margin-bottom: 36px;
+	padding-bottom: 29px;
+	border-bottom: 1px solid #484848;
+}
+.openClient .institutionClass{
+	margin-bottom: 15px;
+	font-size: 12px;
+	font-family: "museo300";
+}
+.openClient .nameInstitution{
+	font-size: 36px;
+	font-family: "museo700";
+	margin-right: 12px;
+}
+.openClient .socialLink{
+	width: 18px;
+	height: 18px;
+}
+.openClient .defaultText{
+	font-size: 12px;
+	font-family: "museo300";
+	margin-bottom: 18px;
+}
+.openClient  .reviewAboutUs{
+	font-size: 16px;
+	font-family: "museo300";
+	line-height: 1.7;
+	margin-bottom: 30px;
+}
+.openClient .client{
+	font-size: 16px;
+	font-family: "museo500";
+	line-height: 1.5;
+	flex-basis: 60%;
+}
+.howItWorks{
+	background: url(../../img/gradientBg.png) bottom no-repeat;
+	background-size: 100%;
+	padding-bottom: 55px;
+	margin-bottom: -44px;
+}
+.howItWorks .firstSteps{
+	position: relative;
+	margin-bottom: 20px;
+}
+.howItWorks .titleBlock{
+	color: #e80000;
+	font-size: 36px;
+	font-family: "museo700";
+	text-align: center;
+	margin-bottom: 20px;
+}
+.howItWorks .descriptionBlock{
+	max-width: 630px;
+	margin: 0 auto 60px;
+	font-size: 17px;
+	line-height: 1.4;
+	text-align: center;
+}
+.howItWorks .firstSteps .flexItem{
+	text-align: center;
+	line-height: 1;
+	position: relative;
+	width: 256px;
+}
+.howItWorks .firstSteps .flexItem.tracks{
+	flex-basis: 550px;
+}
+.howItWorks .firstSteps .flexItem .numbers{
+	margin-bottom: 15px;
+	font-family: "museo300";
+}
+.howItWorks .firstSteps .flexItem .text{
+	font-family: "museo700";
+	font-size: 11px;
+	text-transform: uppercase;
+}
+.howItWorks .firstSteps .flexItem.servers{
+	text-align: left;
+	line-height: 1.5;
+}
+.howItWorks .firstSteps .flexItem.servers:after{
+	content: "";
+	position: absolute;
+	right: 0;
+	top:50%;
+	height: 1px;
+	background: #4c4c4c;
+	width: 40%;
+}
+.howItWorks .firstSteps .flexItem.genre:before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top:50%;
+	height: 1px;
+	background: #4c4c4c;
+	width: 20%;
+}
+.howItWorks .firstSteps .flexItem.genre:after{
+	content: "";
+	position: absolute;
+	right: 0;
+	top:50%;
+	height: 1px;
+	background: #4c4c4c;
+	width: 20%;
+}
+.howItWorks .firstSteps .flexItem.tracks:before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top:50%;
+	height: 1px;
+	background: #4c4c4c;
+	width: 15%;
+}
+.howItWorks .firstSteps .flexItem.tracks:after{
+	content: "";
+	position: absolute;
+	right: 0;
+	top:50%;
+	height: 1px;
+	background: #4c4c4c;
+	width: 15%;
+}
+.howItWorks .firstSteps .flexItem.institution:before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top:50%;
+	height: 1px;
+	background: #4c4c4c;
+	width: 15%;
+}
+.howItWorks .firstSteps .flexItem.institution:after{
+	content: "";
+	position: absolute;
+	right: 0;
+	top:50%;
+	height: 1px;
+	background: #4c4c4c;
+	width: 15%;
+}
+.howItWorks .firstSteps .flexItem.brands:before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top:50%;
+	height: 1px;
+	background: #4c4c4c;
+	width: 23%;
+}
+.howItWorks .firstSteps .flexItem.genre .numbers,
+.howItWorks .firstSteps .flexItem.institution .numbers{
+	font-size: 63px;
+}
+.howItWorks .firstSteps .flexItem.tracks .numbers{
+	font-size: 77px;
+	font-family: "museo700";
+}
+.howItWorks .firstSteps .flexItem.tracks .text{
+	font-size: 14px;
+}
+.howItWorks .firstSteps .flexItem.brands .numbers{
+	font-size: 40px;
+}
+.howItWorks .wifiStep{
+	position: relative;
+	max-width: 190px;
+	text-align: center;
+	height: 150px;
+	margin: 0 auto 15px;
+}
+.howItWorks .wifiStep:before{
+	content: "";
+	position: absolute;
+	left: 95px;
+	top:0;
+	height: 18%;
+	width: 1px;
+	background-color: #4c4c4c;
+}
+.howItWorks .wifiStep:after{
+	content: "";
+	position: absolute;
+	left: 95px;
+	bottom:0;
+	height: 18%;
+	width: 1px;
+	background-color: #4c4c4c;
+}
+.howItWorks .wifiStep .contentBlock{
+	padding: 17px 0 10px;
+	position: relative;
+}
+.howItWorks .wifiStep .contentBlock .svgBlock{
+	height: 20px;
+	width: 37px;
+	color: #fff;
+	margin: 0 auto 15px;
+}
+.howItWorks .wifiStep .contentBlock .svgBlock svg{
+	fill:currentColor;
+}
+.howItWorks .bigText{
+	font-family: "museo500";
+	margin-bottom: 5px;
+}
+.howItWorks .smallText{
+	font-size: 9px;
+	font-family: "museo300";
+}
+.howItWorks .secondStep{
+	position: relative;
+	margin-bottom: 160px;
+}
+.howItWorks .secondStep .loudspeaker{
+	background: url(../../img/loudspeaker.png) no-repeat center;
+	background-size: 133px 214px;
+	width: 185px;
+	height: 214px;
+	position: relative;
+}
+.howItWorks .secondStep .laptop{
+	background: url(../../img/laptop.png) no-repeat center;
+	background-size: 496px 282px;
+	width: 525px;
+	height: 282px;
+	position: relative;
+	flex-basis: 70%;
+}
+.howItWorks .secondStep .laptop:before{
+	content: "";
+	position: absolute;
+	top:50%;
+	left: 0;
+	width: 20%;
+	background-color: #4c4c4c;
+	height: 1px;
+}
+.howItWorks .secondStep .laptop:after{
+	content: "";
+	position: absolute;
+	top:50%;
+	right: 0;
+	width: 20%;
+	background-color: #4c4c4c;
+	height: 1px;
+}
+.howItWorks .contentBlock{
+	text-align: center;
+}
+.howItWorks .priceContent{
+	text-align: center;
+}
+.howItWorks .priceContent .titlePrices{
+	color: #e80000;
+	font-size: 36px;
+	font-family: "museo700";
+	margin-bottom: 22px;
+}
+.howItWorks .priceContent .descrPrices{
+	margin: 0 auto 30px;
+	font-size: 17px;
+	line-height: 1.4;
+}
+.howItWorks .priceContent .smallText{
+	font-family: "museo300";
+	font-size: 14px;
+	opacity: 0.5;
+}
+.pricesBlock .tabNav{
+	text-align: center;
+}
+.pricesBlock .tabNav .item{
+	font-size: 20px;
+	font-family: "museo700";
+	color: #fff;
+	margin: 0 5px;
+	cursor: pointer;
+	padding: 12px 20px 8px;
+}
+.pricesBlock .tabNav .item.active,
+.pricesBlock .tabNav .item:hover{
+	color: #e80000;
+	background: #fff;
+	border-radius: 2px 2px 0 0;
+}
+.pricesBlock .tabContent{
+	color: #585858;
+	background: #fff;
+	text-align: center;
+	padding-bottom: 65px;
+}
+.pricesBlock .tabContent .yearSubscription{
+	font-size: 14px;
+	text-align: center;
+	cursor: pointer;
+	display: inline-block;
+	border-bottom: 1px dotted #585858;
+	font-family: "museo300";
+	padding-top: 37px;
+	margin-bottom: 17px;
+}
+.pricesBlock .container{
+	max-width: 880px;
+	padding: 0;
+}
+.pricesBlock .tabContent .flexItem{
+	background: #f3f5f6;
+	padding: 36px 45px;
+	flex-basis: calc(100%/3 - 2px);
+	max-width: calc(100%/3 - 2px);
+	margin-bottom: 3px;
+}
+.pricesBlock .tabContent .flexItem.aboutPackages{
+	flex-basis: 100%;
+	max-width: 100%;
+	padding: 31px 70px;
+	font-family: "museo300";
+	font-size: 14px;
+}
+.pricesBlock .tabContent .flexItem.aboutPackages a{
+	color:#585858;
+	border-bottom: 1px solid #585858;
+	display: inline-block;
+	margin-top: 16px;
+	font-family: "museo500";
+}
+.pricesBlock .tabContent .titlePackage{
+	font-size: 20px;
+	margin-bottom: 18px;
+	font-family: "museo700";
+}
+.pricesBlock .tabContent .pricePackage{
+	font-size: 60px;
+	font-family: "museo300";
+	margin-bottom: 17px;
+}
+.pricesBlock .tabContent .descPackage{
+	font-size: 12px;
+	font-family: "museo300";
+	margin-bottom: 25px;
+}
+.pricesBlock .tabContent .btnBlock a{
+	padding: 14px 30px;
+	font-size: 12px;
+	text-transform: uppercase;
+	background-color: #d72234;
+	font-family: "museo500";
+	color: #fff;
+}
+.pricesBlock .tabContent .btnBlock a:hover{
+	opacity: 0.8;
+}
+.pricesBlock .chainCompanies{
+	max-width: 490px;
+	margin: 45px auto 0;
+}
+.pricesBlock .chainCompanies .titleBlock{
+	font-size: 24px;
+	font-family: "museo700";
+	margin-bottom: 20px;
+}
+.pricesBlock .chainCompanies .descriptionBlock{
+	font-size: 14px;
 	font-family: "museo300";
 }

@@ -72,4 +72,47 @@
 		order: 4;
 		flex-basis: 37%;
 	}
+	.ourClients{
+		padding: 47px 0 55px;
+	}
+	.ourClients .titleBlock{
+		margin-bottom: 30px;
+		font-size: 24px;
+	}
+	.ourClients .ourClientsCarousel{
+		margin-bottom: 15px;
+	}
+	.ourClients .ourClientsCarousel .clientBlock{
+		width: 69px;
+		margin-bottom: 20px;
+	}
+	.ourClients .openClient .imbBlock{
+		display: none;
+	}
+	.ourClients .openClient .textBlock{
+		max-height: 350px;
+		overflow-y: scroll;
+		flex-basis: 100%;
+		padding: 0;
+	}
+	.ourClients .openClient .headerTextBlock{
+		margin-bottom: 20px;
+		padding-bottom: 15px;
+	}
+	.ourClients .openClient .nameInstitution{
+		font-size: 24px;
+	}
+	.ourClients .openClient .footerTextBlock{
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	.ourClients .openClient .client{
+		order: 2;
+		text-align: center;
+		flex-basis: 100%;
+	}
+	.ourClients .openClient .photoClient{
+		margin: 0 auto 15px;
+	}
 }
