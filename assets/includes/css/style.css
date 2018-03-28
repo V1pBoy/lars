@@ -67,10 +67,11 @@ body {
 	color: #fff;
 	font-size: 10px;
 	cursor: pointer;
-	transition: transform 300ms, padding 300ms;
+	transition: font-size 300ms;
+	min-width:65px;
 }
 .headerBlock .logoLanguageBlock .languageBlock:hover{
-	transform:scale(1.2);
+	font-size: 14px;
 }
 .headerBlock .languageBlock .currentLanguage{
 	padding: 11px;
@@ -107,7 +108,7 @@ body {
 }
 
 .headerBlock .listMenu > li > a {
-	
+
 }
 
 .headerBlock .loginBtn a {
