@@ -7,13 +7,17 @@ body {
 
 /*Header Style Begin*/
 .headerBlock {
-	padding: 34px 0 0;
-	position: absolute;
+	padding: 17px 0 17px;
+	position: fixed;
 	top: 0;
 	width: 100%;
 	text-transform: uppercase;
+	z-index: 99;
+	transition: background 500ms;
 }
-
+.headerBlock.blackHeader{
+	background-color: rgba(0,0,0, .85);
+}
 .headerBlock a {
 	color: #fff;
 	text-decoration: none;
@@ -25,10 +29,20 @@ body {
 
 .headerBlock .logoLanguageBlock {
 	font-family: "museo700";
+	transition: transform 300ms;
 }
-
+.headerBlock .logoLanguageBlock .logo{
+	margin-right: 10px;
+}
 .headerBlock .logoLanguageBlock ul {
 	display: none;
+	position: absolute;
+	background: #000;
+	width: 100%;
+	padding: 10px 0 10px 10px;
+	border: 1px solid rgba(249, 249, 249, 0.2);
+	border-top: none;
+	left: 0;
 }
 
 .headerBlock .logoLanguageBlock ul > li {
@@ -46,27 +60,34 @@ body {
 
 .headerBlock .languageBlock.open ul {
 	display: block;
-	position: absolute;
-	background: #000;
-	width: 100%;
-	padding: 10px 0 10px 10px;
-	border: 1px solid rgba(249, 249, 249, 0.1);
-	border-top: none;
 }
 
 .headerBlock .logoLanguageBlock .languageBlock {
 	position: relative;
 	color: #fff;
 	font-size: 10px;
+	cursor: pointer;
+	transition: transform 300ms, padding 300ms;
 }
-
-.headerBlock .logoLanguageBlock .currentLanguage {
-	padding: 10px 0 10px 10px;
-	width: 52px;
-	background-color: #000;
-	border: 1px solid rgba(249, 249, 249, 0.1);
+.headerBlock .logoLanguageBlock .languageBlock:hover{
+	transform:scale(1.2);
 }
-
+.headerBlock .languageBlock .currentLanguage{
+	padding: 11px;
+	border: 1px solid transparent;
+}
+.headerBlock .languageBlock.open .currentLanguage{
+	background: #000;
+	border-color:rgba(255, 255, 255, 0.2);
+}
+.headerBlock .logoLanguageBlock .currentLanguage .svgBlock{
+	width: 6px;
+	height: 4px;
+	margin-left: 4px;
+}
+.headerBlock .logoLanguageBlock .currentLanguage svg{
+	fill:currentColor;
+}
 .headerBlock .listMenu {
 	font-size: 12px;
 	letter-spacing: 1.2px;
@@ -86,7 +107,7 @@ body {
 }
 
 .headerBlock .listMenu > li > a {
-	opacity: 0.5;
+	
 }
 
 .headerBlock .loginBtn a {
@@ -147,10 +168,15 @@ body {
 	color: #ffffff;
 	font-family: "museo300";
 	font-size: 20px;
-	background: url(../../img/bgContactUs.jpg) calc(100% + 380px) center no-repeat;
 	background-size: cover;
+	position: relative;
 }
-
+.contactUsBlock #nokey{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
 .contactUsBlock .contentBlock {
 	padding: 217px 0 275px;
 }
@@ -210,6 +236,12 @@ body {
 .footerBlock .partnerShip a {
 	font-size: 14px;
 	text-decoration: underline;
+	color: #fff;
+	opacity: .6;
+	transition: opacity 300ms;
+}
+.footerBlock .partnerShip a:hover{
+	opacity: .5;
 }
 .footerBlock .partnerShip .logoBlock{
 	margin-right: 5px;
@@ -217,7 +249,7 @@ body {
 .footerBlock .partnerShip svg{
 	width: 26px;
 	height: 21px;
-	fill: rgba(255,255,255,0.6);
+	fill: currentColor;
 }
 .footerBlock .socialLinks .item {
 	padding: 0 16px;
@@ -225,10 +257,21 @@ body {
 
 .footerBlock .socialLinks .item .logoBlock {
 	margin-bottom: 10px;
-	height: 19px;
-	width: 19px;
 }
-
+.footerBlock .socialLinks .item a{
+	color: #fff;
+	opacity: 0.6;
+	transition: opacity 300ms;
+	text-align: center;
+}
+.footerBlock .socialLinks .item a:hover{
+	opacity: 0.5;
+}
+.footerBlock .socialLinks .item svg{
+	fill: currentColor;
+	height: 18px;
+	width: 18px;
+}
 .footerBlock .socialLinks .item:first-child {
 	padding-left: 0;
 }
@@ -239,6 +282,12 @@ body {
 
 .footerBlock .madeByBlock {
 	text-align: center;
+}
+.footerBlock .madeByBlock a{
+	transition: 300ms;
+}
+.footerBlock .madeByBlock a:hover{
+	opacity: 0.9;
 }
 /*Footer Style End*/
 .ourTeamBlock .whiteBlock{
@@ -314,8 +363,12 @@ body {
 .ourClients .ourClientsCarousel .clientBlock{
 	width: 125px;
 	margin: 0 auto 50px;
+	transition: 300ms;
+	cursor: pointer;
 }
-
+.ourClients .ourClientsCarousel .clientBlock:hover{
+	opacity: .6;
+}
 .ourClients .ourClientsCarousel .logoClient img{
 	width: 100%;
 }
@@ -343,7 +396,6 @@ body {
 	border-radius: 50px;
 }
 .openClient{
-	display: none;
 	top:0;
 	position: fixed;
 	height: 100%;
@@ -392,9 +444,19 @@ body {
 	font-family: "museo700";
 	margin-right: 12px;
 }
-.openClient .socialLink{
+.openClient .socialLink a{
+	color: #fff;
+	opacity: .5;
+	margin-top: 10px;
+	transition: opacity 300ms;
+}
+.openClient .socialLink a:hover{
+	opacity: 0.4;
+}
+.openClient .socialLink svg{
 	width: 18px;
-	height: 18px;
+	height: 16px;
+	fill:currentColor;
 }
 .openClient .defaultText{
 	font-size: 12px;
@@ -746,4 +808,133 @@ body {
 .pricesBlock .chainCompanies .descriptionBlock{
 	font-size: 14px;
 	font-family: "museo300";
+}
+.openPrices{
+	top: 0;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: #000;
+	z-index: 999;
+}
+.openPrices .tabNav,
+.openPrices .tabContent{
+	width: 100%;
+}
+.openPrices .tabNav .item{
+	margin: 0 5px;
+	font-size: 20px;
+	font-family: "museo700";
+	cursor: pointer;
+	padding: 13px 15px;
+}
+.openPrices .tabNav .item.active{
+	color: #e80000;
+	border:1px solid #383838;
+	border-bottom-color: #000;
+	border-radius: 2px 2px 0 0;
+	position: relative;
+}
+.openPrices .tabNav .item:before{
+	content: "";
+	height:1px;
+	width: 100%;
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	background: #000;
+}
+.openPrices .contentBlock{
+	border:1px solid #383838;
+	padding: 40px 50px 0;
+}
+.openPrices .tablePrices{
+	text-align: center;
+}
+.openPrices .tablePrices .tableHead{
+	border-bottom: 1px solid #383838;
+	padding-bottom: 35px;
+}
+.openPrices .tablePrices .nameRow{
+	flex-basis: 217px;
+	text-align: left;
+	padding-left:26px;
+	line-height: 21px;
+}
+.openPrices .tablePrices .nameRow span{
+	border-bottom:1px dotted rgba(255, 255, 255, 0.4);
+	padding-bottom: 2px;
+}
+.openPrices .tablePrices .priceBlock{
+	flex-basis: calc((100% - 217px)/3);
+}
+.openPrices .tablePrices .priceBlock .namePackage{
+	font-size: 17px;
+	margin-bottom: 30px;
+	font-family: "museo700"
+}
+.openPrices .tablePrices .priceBlock .price{
+	font-size: 60px;
+	font-family: "museo300"
+}
+.openPrices .tablePrices .tableBody .flexItem{
+	padding: 16px 0;
+}
+.openPrices .tablePrices .tableBody .tableRow:nth-child(even){
+	background-color: rgba(255, 255, 255, 0.1);
+}
+.openPrices .tablePrices .tableBody .nameRow{
+	color: #bbb;
+	padding-left: 26px;
+	font-size: 12px;
+}
+.openPrices .tablePrices .tableBody .priceBlock span{
+	height: 10px;
+	width: 10px;
+	display: inline-block;
+	border-radius: 30px;
+}
+.openPrices .tablePrices .tableBody .priceBlock .empty{
+	background-color: #4d4d4d;
+}
+.openPrices .tablePrices .tableBody .priceBlock .green{
+	background-color: #5ad766;
+}
+.openPrices .tablePrices .tableRow:last-child .flexItem{
+	padding: 40px 0;
+}
+.openPrices .tablePrices a{
+	color: #fff;
+	display: inline-block;
+	background-color: #d72234;
+	padding: 13px 30px;
+	border-radius: 2px;
+	font-size: 12px;
+	transition: opacity 300ms;
+}
+.openPrices .tablePrices a:hover{
+	opacity: 0.7;
+}
+.openPrices .closeBtn{
+	cursor: pointer;
+	color: #fff;
+	opacity: .5;
+	width: 25px;
+	height:25px;
+	margin-bottom: 50px;
+	position: relative;
+	left: calc(100% - 30px);
+	transition: opacity 300ms;
+}
+.openPrices .closeBtn:hover{
+	opacity: 0.3;
+}
+.openPrices .closeBtn svg{
+	fill: currentColor;
+}
+@media (max-height: 860px){
+	.openPrices{
+		align-items: inherit !important;
+		padding-top: 50px;overflow-y: auto;
+	}
 }
