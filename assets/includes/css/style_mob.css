@@ -72,47 +72,47 @@
 		order: 4;
 		flex-basis: 37%;
 	}
-	.ourClients{
+	{
 		padding: 47px 0 55px;
 	}
-	.ourClients .titleBlock{
+	.titleBlock{
 		margin-bottom: 30px;
 		font-size: 24px;
 	}
-	.ourClients .ourClientsCarousel{
+	.ourClientsCarousel{
 		margin-bottom: 15px;
 	}
-	.ourClients .ourClientsCarousel .clientBlock{
+	.ourClientsCarousel .clientBlock{
 		width: 69px;
 		margin-bottom: 20px;
 	}
-	.ourClients .openClient .imbBlock{
+	.openClient .imbBlock{
 		display: none;
 	}
-	.ourClients .openClient .textBlock{
+	.openClient .textBlock{
 		max-height: 350px;
 		overflow-y: scroll;
 		flex-basis: 100%;
 		padding: 0;
 	}
-	.ourClients .openClient .headerTextBlock{
+	.openClient .headerTextBlock{
 		margin-bottom: 20px;
 		padding-bottom: 15px;
 	}
-	.ourClients .openClient .nameInstitution{
+	.openClient .nameInstitution{
 		font-size: 24px;
 	}
-	.ourClients .openClient .footerTextBlock{
+	.openClient .footerTextBlock{
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 	}
-	.ourClients .openClient .client{
+	.openClient .client{
 		order: 2;
 		text-align: center;
 		flex-basis: 100%;
 	}
-	.ourClients .openClient .photoClient{
+	.openClient .photoClient{
 		margin: 0 auto 15px;
 	}
 }

@@ -13,7 +13,18 @@
 	<link rel="stylesheet" href="assets/includes/css/style_mob.css">
 </head>
 <body>
-
+<div class="socialLinksSvg">
+	<svg id="instagrammSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9 13.54A4.54 4.54 0 1 1 13.54 9 4.54 4.54 0 0 1 9 13.54zm0-7.66A3.12 3.12 0 1 0 12.12 9 3.12 3.12 0 0 0 9 5.88zm5-.31a1.2 1.2 0 1 1 1.2-1.2 1.2 1.2 0 0 1-1.2 1.2zm0-1.21zM13.45 18h-8.9A4.55 4.55 0 0 1 0 13.45v-8.9A4.55 4.55 0 0 1 4.55 0h8.9A4.55 4.55 0 0 1 18 4.55v8.9A4.55 4.55 0 0 1 13.45 18zM4.55 1.42a3.13 3.13 0 0 0-3.13 3.13v8.9a3.13 3.13 0 0 0 3.14 3.13h8.9a3.13 3.13 0 0 0 3.14-3.13v-8.9a3.13 3.13 0 0 0-3.14-3.13z" /></svg>
+	<svg id="facebookSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.01 18">
+		<path d="M12.71 18H4.3a4.43 4.43 0 0 1-4.31-4.55v-8.9A4.43 4.43 0 0 1 4.3 0h8.41a4.43 4.43 0 0 1 4.28 4.55v8.9A4.43 4.43 0 0 1 12.71 18zM4.3 1.42a3 3 0 0 0-3 3.13v8.9a3 3 0 0 0 3 3.13h8.41a3 3 0 0 0 3-3.13v-8.9a3 3 0 0 0-3-3.13zm3.38 5.46v1.77H6.45v2.18h1.23v6.46h2.53v-6.46h1.7s.16-1 .24-2.18h-1.93V7.16a.61.61 0 0 1 .55-.52h1.38V4.38h-1.88a2.3 2.3 0 0 0-2.59 2.5z"/>
+	</svg>
+	<svg id="youtubeSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.01 17">
+		<path d="M12.71 17H4.3a4.31 4.31 0 0 1-4.28-4.3V4.3A4.31 4.31 0 0 1 4.3 0h8.41a4.3 4.3 0 0 1 4.31 4.3v8.4a4.3 4.3 0 0 1-4.31 4.3zM4.3 1.34a3 3 0 0 0-3 3v8.4a3 3 0 0 0 3 3h8.41a3 3 0 0 0 3-3V4.3a3 3 0 0 0-3-3zm2.08 10V5.66A.79.79 0 0 1 7.62 5l4.08 2.85a.79.79 0 0 1 0 1.29L7.62 12a.79.79 0 0 1-1.24-.65z"/>
+	</svg>
+	<svg id="vkSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.01 17">
+		<path d="M12.71 17H4.3a4.31 4.31 0 0 1-4.29-4.3V4.3A4.31 4.31 0 0 1 4.3 0h8.41a4.31 4.31 0 0 1 4.3 4.3v8.4a4.31 4.31 0 0 1-4.3 4.3zM4.3 1.34a3 3 0 0 0-3 3v8.4a3 3 0 0 0 3 3h8.41a3 3 0 0 0 3-3V4.3a3 3 0 0 0-3-3zm6.06 6.79a1.9 1.9 0 0 0 1.28-1.92 2.08 2.08 0 0 0-2.11-2.08H5.37V13h3.64c2.25 0 3.13-1.4 3.13-2.7a2 2 0 0 0-1.78-2.17zM7.45 5.71h.47a2.59 2.59 0 0 1 1.15.13.93.93 0 0 1 .43.81 1.05 1.05 0 0 1-.36.8 1.74 1.74 0 0 1-1.07.21h-.62v-2zm2.13 5.47a2.05 2.05 0 0 1-1.15.19h-1v-2.2h1.09a2.2 2.2 0 0 1 1 .16 1.15 1.15 0 0 1 0 1.85z"/>
+	</svg>
+</div>
 <header class="headerBlock">
 	<div class="container">
 		<div class="contentBlock">
@@ -58,9 +69,14 @@
 					</li>
 				</ul>
 				<div class="loginBtn">
-					<a href="#">
-						Войти
-					</a>
+					<div class="flexWrapper centerContent">
+						<a href="#" class="signIn">
+							Войти
+						</a>
+						<a href="#" class="connectBtn">
+							Подключиться
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -78,63 +94,13 @@
 					<div class="logoClient">
 						<img src="assets/img/m1.jpg" alt="">
 					</div>
-					<div style="display: none" class="contentClient">
-						<div class="imgBlock">
-							<img src="" alt="">
-						</div>
-						<div class="institutionClass">
-							Ресторан
-						</div>
-						<div class="nameInstitution">
-							12 персон
-						</div>
-						<div class="socialLinks">
-							<p>https://www.instagram.com/</p>
-							<p>https://www.facebook.com/</p>
-							<p>https://www.vk.com/</p>
-						</div>
-						<div class="reviewAboutUs">
-							«Специалисты компании LARS Production изучили различные отрасли потребления музыкального оформления, различные сферы бизнеса и шоу-бизнеса в том числе. Стиль, чувство вкуса и достаточно глубокое понимание того или иного направления в музыке, в определенной сфере, вот наш взгляд к тому или иному клиенту. Комплекс услуг от компании LARS Production для Вас и Вашего бизнеса , как «шаг дальше – шаг вперед»
-						</div>
-						<div class="client">
-							Владимир Константинопольский,
-							Генеральный директор
-						</div>
-						<div class="photoClient">
-							<img src="" alt="">
-						</div>
-					</div>
+					<div class="contentClient" data-imgBlock="assets/img/12-person-oc.jpg" data-institutionClass="Ресторан" data-nameInstitution="12 персон" data-socInst="https://www.instagram.com/" data-socVk="https://www.vk.com/" data-nameClient="Владимир Константинопольский" data-positionClient="Генеральный директор" data-photoClient="assets/img/client-photo.png" data-review="«Специалисты компании LARS Production изучили различные отрасли потребления музыкального оформления, различные сферы бизнеса и шоу-бизнеса в том числе. Стиль, чувство вкуса и достаточно глубокое понимание того или иного направления в музыке, в определенной сфере, вот наш взгляд к тому или иному клиенту. Комплекс услуг от компании LARS Production для Вас и Вашего бизнеса , как «шаг дальше – шаг вперед»"></div>
 				</div>
 				<div class="clientBlock">
 					<div class="logoClient">
 						<img src="assets/img/quanto-costa.jpg" alt="">
 					</div>
-					<div style="display: none" class="contentClient">
-						<div class="imgBlock">
-							<img src="" alt="">
-						</div>
-						<div class="institutionClass">
-							Ресторан
-						</div>
-						<div class="nameInstitution">
-							12 персон
-						</div>
-						<div class="socialLinks">
-							<p>https://www.instagram.com/</p>
-							<p>https://www.facebook.com/</p>
-							<p>https://www.vk.com/</p>
-						</div>
-						<div class="reviewAboutUs">
-							«Специалисты компании LARS Production изучили различные отрасли потребления музыкального оформления, различные сферы бизнеса и шоу-бизнеса в том числе. Стиль, чувство вкуса и достаточно глубокое понимание того или иного направления в музыке, в определенной сфере, вот наш взгляд к тому или иному клиенту. Комплекс услуг от компании LARS Production для Вас и Вашего бизнеса , как «шаг дальше – шаг вперед»
-						</div>
-						<div class="client">
-							Владимир Константинопольский,
-							Генеральный директор
-						</div>
-						<div class="photoClient">
-							<img src="" alt="">
-						</div>
-					</div>
+					<div class="contentClient" data-imgBlock="assets/img/12-person-oc.jpg" data-institutionClass="Ресторан" data-nameInstitution="12 персон" data-socInst="https://www.instagram.com/123" data-socfb="https://www.facebook.com/" data-socVk="https://www.vk.com/321" data-nameClient="Владимир Константинопольский" data-positionClient="Генеральный директор" data-photoClient="assets/img/client-photo.png" data-review="«Специалисты компании LARS Production изучили различные отрасли потребления музыкального оформления, различные сферы бизнеса и шоу-бизнеса в том числе. Стиль, чувство вкуса и достаточно глубокое понимание того или иного направления в музыке, в определенной сфере, вот наш взгляд к тому или иному клиенту. Комплекс услуг от компании LARS Production для Вас и Вашего бизнеса , как «шаг дальше – шаг вперед»"></div>
 				</div>
 				<div class="clientBlock">
 					<div class="logoClient">
@@ -519,6 +485,101 @@
 				<div class="clientBlock">
 					<div class="logoClient">
 						<img src="assets/img/mama-casalla.jpg" alt="">
+					</div>
+					<div style="display: none" class="contentClient">
+						<div class="imgBlock">
+							<img src="" alt="">
+						</div>
+						<div class="institutionClass">
+							Ресторан
+						</div>
+						<div class="nameInstitution">
+							12 персон
+						</div>
+						<div class="socialLinks">
+							<p>https://www.instagram.com/</p>
+							<p>https://www.facebook.com/</p>
+							<p>https://www.vk.com/</p>
+						</div>
+						<div class="reviewAboutUs">
+							«Специалисты компании LARS Production изучили различные отрасли потребления музыкального оформления, различные сферы бизнеса и шоу-бизнеса в том числе. Стиль, чувство вкуса и достаточно глубокое понимание того или иного направления в музыке, в определенной сфере, вот наш взгляд к тому или иному клиенту. Комплекс услуг от компании LARS Production для Вас и Вашего бизнеса , как «шаг дальше – шаг вперед»
+						</div>
+						<div class="client">
+							Владимир Константинопольский,
+							Генеральный директор
+						</div>
+						<div class="photoClient">
+							<img src="" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="clientBlock">
+					<div class="logoClient">
+						<img src="assets/img/rokka.jpg" alt="">
+					</div>
+					<div style="display: none" class="contentClient">
+						<div class="imgBlock">
+							<img src="" alt="">
+						</div>
+						<div class="institutionClass">
+							Ресторан
+						</div>
+						<div class="nameInstitution">
+							12 персон
+						</div>
+						<div class="socialLinks">
+							<p>https://www.instagram.com/</p>
+							<p>https://www.facebook.com/</p>
+							<p>https://www.vk.com/</p>
+						</div>
+						<div class="reviewAboutUs">
+							«Специалисты компании LARS Production изучили различные отрасли потребления музыкального оформления, различные сферы бизнеса и шоу-бизнеса в том числе. Стиль, чувство вкуса и достаточно глубокое понимание того или иного направления в музыке, в определенной сфере, вот наш взгляд к тому или иному клиенту. Комплекс услуг от компании LARS Production для Вас и Вашего бизнеса , как «шаг дальше – шаг вперед»
+						</div>
+						<div class="client">
+							Владимир Константинопольский,
+							Генеральный директор
+						</div>
+						<div class="photoClient">
+							<img src="" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="clientBlock">
+					<div class="logoClient">
+						<img src="assets/img/scotch-and-soda.jpg" alt="">
+					</div>
+					<div style="display: none" class="contentClient">
+						<div class="imgBlock">
+							<img src="" alt="">
+						</div>
+						<div class="institutionClass">
+							Ресторан
+						</div>
+						<div class="nameInstitution">
+							12 персон
+						</div>
+						<div class="socialLinks">
+							<p>https://www.instagram.com/</p>
+							<p>https://www.facebook.com/</p>
+							<p>https://www.vk.com/</p>
+						</div>
+						<div class="reviewAboutUs">
+							«Специалисты компании LARS Production изучили различные отрасли потребления музыкального оформления, различные сферы бизнеса и шоу-бизнеса в том числе. Стиль, чувство вкуса и достаточно глубокое понимание того или иного направления в музыке, в определенной сфере, вот наш взгляд к тому или иному клиенту. Комплекс услуг от компании LARS Production для Вас и Вашего бизнеса , как «шаг дальше – шаг вперед»
+						</div>
+						<div class="client">
+							Владимир Константинопольский,
+							Генеральный директор
+						</div>
+						<div class="photoClient">
+							<img src="" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="clientBlock">
+					<div class="logoClient">
+						<img src="assets/img/brisol.jpg" alt="">
 					</div>
 					<div style="display: none" class="contentClient">
 						<div class="imgBlock">
@@ -1259,47 +1320,6 @@
 					<path d="M0 1.02l1-1 11.5 11.51L24 .02l1 1L13.47 12.5 24 23.02l-1 1-10.5-10.56L1.94 24.02l-.94-1L11.53 12.5z"/>
 				</svg>
 			</div>
-			<div class="textImage flexWrapper justifyContent alignMiddle">
-				<div class="imbBlock">
-					<img src="assets/img/12-person-oc.jpg" alt="">
-				</div>
-				<div class="textBlock">
-					<div class="headerTextBlock">
-						<div class="institutionClass">
-							Ресторан
-						</div>
-						<div class="nameInstitution inlineBlock alignMiddle">
-							12 персон
-						</div>
-						<div class="socialLink inlineBlock alignMiddle">
-							<a href="https://www.instagram.com" target="_blank">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9 13.54A4.54 4.54 0 1 1 13.54 9 4.54 4.54 0 0 1 9 13.54zm0-7.66A3.12 3.12 0 1 0 12.12 9 3.12 3.12 0 0 0 9 5.88zm5-.31a1.2 1.2 0 1 1 1.2-1.2 1.2 1.2 0 0 1-1.2 1.2zm0-1.21zM13.45 18h-8.9A4.55 4.55 0 0 1 0 13.45v-8.9A4.55 4.55 0 0 1 4.55 0h8.9A4.55 4.55 0 0 1 18 4.55v8.9A4.55 4.55 0 0 1 13.45 18zM4.55 1.42a3.13 3.13 0 0 0-3.13 3.13v8.9a3.13 3.13 0 0 0 3.14 3.13h8.9a3.13 3.13 0 0 0 3.14-3.13v-8.9a3.13 3.13 0 0 0-3.14-3.13z"/></svg>
-							</a>
-						</div>
-					</div>
-					<div class="reviewAboutUs">
-						<div class="defaultText">
-							Отзыв о работе с нами:
-						</div>
-						<div class="review">
-							«Специалисты компании LARS Production изучили различные отрасли потребления музыкального оформления, различные сферы бизнеса и шоу-бизнеса в том числе. Стиль, чувство вкуса и достаточно глубокое понимание того или иного направления в музыке, в определенной сфере, вот наш взгляд к тому или иному клиенту. Комплекс услуг от компании LARS Production для Вас и Вашего бизнеса , как «шаг дальше – шаг вперед»
-						</div>
-					</div>
-					<div class="footerTextBlock flexWrapper justifyContent">
-						<div class="client">
-							<div class="name">
-								Владимир Константинопольский,
-							</div>
-							<div class="position">
-								Генеральный директор
-							</div>
-						</div>
-						<div class="photoClient">
-							<img src="assets/img/client-photo.png" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 </div>
@@ -1476,321 +1496,6 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="assets/libraries/OwlCarousel/owl.carousel.js"></script>
-<script>
-    $('.ourClientsCarousel').owlCarousel({
-        loop:false,
-        margin:10,
-        nav:true,
-        responsive:{
-            0:{
-                items:2
-            },
-            500:{
-                items:3
-            },
-            1000:{
-                items:6
-            }
-        }
-    });
-    $('.ourTeamCarousel').owlCarousel({
-        responsive:{
-            900:{
-                items:4
-            }
-        }
-    });
-//    canvas Script
-    var canvas = document.getElementById('nokey'),
-        can_w = parseInt(canvas.getAttribute('width')),
-        can_h = parseInt(canvas.getAttribute('height')),
-        ctx = canvas.getContext('2d');
-
-    // console.log(typeof can_w);
-
-    var ball = {
-            x: 0,
-            y: 0,
-            vx: 0,
-            vy: 0,
-            r: 0,
-            alpha: 1,
-            phase: 0
-        },
-        ball_color = {
-            r: 232,
-            g: 0,
-            b: 0
-        },
-        R = 2,
-        balls = [],
-        alpha_f = 0.03,
-        alpha_phase = 0,
-
-// Line
-        link_line_width = 0.8,
-        dis_limit = 260,
-        add_mouse_point = true,
-        mouse_in = false,
-        mouse_ball = {
-            x: 0,
-            y: 0,
-            vx: 0,
-            vy: 0,
-            r: 0,
-            type: 'mouse'
-        };
-
-    // Random speed
-    function getRandomSpeed(pos){
-        var  min = -1,
-            max = 1;
-        switch(pos){
-            case 'top':
-                return [randomNumFrom(min, max), randomNumFrom(0.1, max)];
-                break;
-            case 'right':
-                return [randomNumFrom(min, -0.1), randomNumFrom(min, max)];
-                break;
-            case 'bottom':
-                return [randomNumFrom(min, max), randomNumFrom(min, -0.1)];
-                break;
-            case 'left':
-                return [randomNumFrom(0.1, max), randomNumFrom(min, max)];
-                break;
-            default:
-                return;
-                break;
-        }
-    }
-    function randomArrayItem(arr){
-        return arr[Math.floor(Math.random() * arr.length)];
-    }
-    function randomNumFrom(min, max){
-        return Math.random()*(max - min) + min;
-    }
-    console.log(randomNumFrom(0, 10));
-    // Random Ball
-    function getRandomBall(){
-        var pos = randomArrayItem(['top', 'right', 'bottom', 'left']);
-        switch(pos){
-            case 'top':
-                return {
-                    x: randomSidePos(can_w),
-                    y: -R,
-                    vx: getRandomSpeed('top')[0],
-                    vy: getRandomSpeed('top')[1],
-                    r: R,
-                    alpha: 1,
-                    phase: randomNumFrom(0, 10)
-                }
-                break;
-            case 'right':
-                return {
-                    x: can_w + R,
-                    y: randomSidePos(can_h),
-                    vx: getRandomSpeed('right')[0],
-                    vy: getRandomSpeed('right')[1],
-                    r: R,
-                    alpha: 1,
-                    phase: randomNumFrom(0, 10)
-                }
-                break;
-            case 'bottom':
-                return {
-                    x: randomSidePos(can_w),
-                    y: can_h + R,
-                    vx: getRandomSpeed('bottom')[0],
-                    vy: getRandomSpeed('bottom')[1],
-                    r: R,
-                    alpha: 1,
-                    phase: randomNumFrom(0, 10)
-                }
-                break;
-            case 'left':
-                return {
-                    x: -R,
-                    y: randomSidePos(can_h),
-                    vx: getRandomSpeed('left')[0],
-                    vy: getRandomSpeed('left')[1],
-                    r: R,
-                    alpha: 1,
-                    phase: randomNumFrom(0, 10)
-                }
-                break;
-        }
-    }
-    function randomSidePos(length){
-        return Math.ceil(Math.random() * length);
-    }
-
-    // Draw Ball
-    function renderBalls(){
-        Array.prototype.forEach.call(balls, function(b){
-            if(!b.hasOwnProperty('type')){
-                ctx.fillStyle = 'rgba('+ball_color.r+','+ball_color.g+','+ball_color.b+','+b.alpha+')';
-                ctx.beginPath();
-                ctx.arc(b.x, b.y, R, 0, Math.PI*2, true);
-                ctx.closePath();
-                ctx.fill();
-            }
-        });
-    }
-
-    // Update balls
-    function updateBalls(){
-        var new_balls = [];
-        Array.prototype.forEach.call(balls, function(b){
-            b.x += b.vx;
-            b.y += b.vy;
-
-            if(b.x > -(50) && b.x < (can_w+50) && b.y > -(50) && b.y < (can_h+50)){
-                new_balls.push(b);
-            }
-
-            // alpha change
-            b.phase += alpha_f;
-            b.alpha = Math.abs(Math.cos(b.phase));
-            // console.log(b.alpha);
-        });
-
-        balls = new_balls.slice(0);
-    }
-
-    // loop alpha
-    function loopAlphaInf(){
-
-    }
-
-    // Draw lines
-    function renderLines(){
-        var fraction, alpha;
-        for (var i = 0; i < balls.length; i++) {
-            for (var j = i + 1; j < balls.length; j++) {
-
-                fraction = getDisOf(balls[i], balls[j]) / dis_limit;
-
-                if(fraction < 1){
-                    alpha = (1 - fraction).toString();
-
-                    ctx.strokeStyle = 'rgba(150,150,150,'+alpha+')';
-                    ctx.lineWidth = link_line_width;
-
-                    ctx.beginPath();
-                    ctx.moveTo(balls[i].x, balls[i].y);
-                    ctx.lineTo(balls[j].x, balls[j].y);
-                    ctx.stroke();
-                    ctx.closePath();
-                }
-            }
-        }
-    }
-
-    // calculate distance between two points
-    function getDisOf(b1, b2){
-        var  delta_x = Math.abs(b1.x - b2.x),
-            delta_y = Math.abs(b1.y - b2.y);
-
-        return Math.sqrt(delta_x*delta_x + delta_y*delta_y);
-    }
-
-    // add balls if there a little balls
-    function addBallIfy(){
-        if(balls.length < 20){
-            balls.push(getRandomBall());
-        }
-    }
-
-    // Render
-    function render(){
-        ctx.clearRect(0, 0, can_w, can_h);
-
-        renderBalls();
-
-        renderLines();
-
-        updateBalls();
-
-        addBallIfy();
-
-        window.requestAnimationFrame(render);
-    }
-
-    // Init Balls
-    function initBalls(num){
-        for(var i = 1; i <= num; i++){
-            balls.push({
-                x: randomSidePos(can_w),
-                y: randomSidePos(can_h),
-                vx: getRandomSpeed('top')[0],
-                vy: getRandomSpeed('top')[1],
-                r: R,
-                alpha: 1,
-                phase: randomNumFrom(0, 10)
-            });
-        }
-    }
-    // Init Canvas
-    function initCanvas(){
-        canvas.setAttribute('width', window.innerWidth);
-        canvas.setAttribute('height', window.innerHeight);
-
-        can_w = parseInt(canvas.getAttribute('width'));
-        can_h = parseInt(canvas.getAttribute('height'));
-    }
-    window.addEventListener('resize', function(e){
-        console.log('Window Resize...');
-        initCanvas();
-    });
-
-    function goMovie(){
-        initCanvas();
-        initBalls(20);
-        window.requestAnimationFrame(render);
-    }
-    goMovie();
-
-    // Mouse effect
-    canvas.addEventListener('mouseenter', function(){
-        console.log('mouseenter');
-        mouse_in = true;
-        balls.push(mouse_ball);
-    });
-    canvas.addEventListener('mouseleave', function(){
-        console.log('mouseleave');
-        mouse_in = false;
-        var new_balls = [];
-        Array.prototype.forEach.call(balls, function(b){
-            if(!b.hasOwnProperty('type')){
-                new_balls.push(b);
-            }
-        });
-        balls = new_balls.slice(0);
-    });
-    canvas.addEventListener('mousemove', function(e){
-        var e = e || window.event;
-        mouse_ball.x = e.pageX;
-        mouse_ball.y = e.pageY;
-        // console.log(mouse_ball);
-    });
-    $(function () {
-		var headerBlock = $(".headerBlock");
-		$(window).on("scroll", function () {
-			var scroll = $(window).scrollTop();
-
-			if(scroll >= 700) {
-				 headerBlock.addClass("blackHeader")
-			}else{
-			    headerBlock.removeClass("blackHeader");
-			}
-        })
-    });
-	$(function () {
-		var currentLanguage = $(".currentLanguage");
-		currentLanguage.on("click", function () {
-			$(this).parent().toggleClass("open");
-        })
-    })
-</script>
+<script src="assets/includes/js/script.js"></script>
 </body>
 </html>

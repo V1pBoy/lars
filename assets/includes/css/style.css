@@ -4,7 +4,12 @@ body {
 	color: #fff;
 	font-size: 14px;
 }
-
+body.modalOpen{
+	overflow: hidden;
+}
+.socialLinksSvg{
+	display: none;
+}
 /*Header Style Begin*/
 .headerBlock {
 	padding: 17px 0 17px;
@@ -22,11 +27,6 @@ body {
 	color: #fff;
 	text-decoration: none;
 }
-
-.headerBlock .contentBlock {
-	padding: 0 95px 0 40px;
-}
-
 .headerBlock .logoLanguageBlock {
 	font-family: "museo700";
 	transition: transform 300ms;
@@ -96,7 +96,7 @@ body {
 }
 
 .headerBlock .listMenu > li {
-	padding: 0 29px;
+	padding: 0 20px;
 }
 
 .headerBlock .listMenu > li:first-child {
@@ -110,14 +110,40 @@ body {
 .headerBlock .listMenu > li > a {
 
 }
-
+.headerBlock .loginBtn{
+	flex-basis: 200px;
+}
+.headerBlock .loginBtn .signIn{
+	margin-right: 10px;
+	position: relative;
+	left: 50%;
+	margin-left: -33px;
+	transition-duration: 300ms;
+	transition-timing-function: ease;
+	transition-property: left,margin;
+}
+.headerBlock.blackHeader .loginBtn .signIn{
+	left: 0;
+	margin-left: 0;
+}
+.headerBlock .loginBtn .connectBtn{
+	background-color: #ffffff;
+	color: #0c0d0d;
+	opacity: 0;
+	transform: translate3d(200%,0,0);
+	transition-property: transform,opacity;
+	transition-timing-function: ease;
+	transition-duration: 300ms;
+}
+.headerBlock.blackHeader .loginBtn .connectBtn{
+	opacity: 1;
+	transform: none;
+}
 .headerBlock .loginBtn a {
 	border: 2px solid rgba(255, 255, 255, 0.5);
 	text-align: center;
-	padding: 6px 5px;
-	min-width: 74px;
+	padding: 6px 15px;
 	font-size: 9px;
-	display: block;
 	border-radius: 2px;
 	font-family: "museo700";
 }
@@ -445,11 +471,16 @@ body {
 	font-family: "museo700";
 	margin-right: 12px;
 }
+.openClient .socialLink{
+	margin-top: 5px;
+}
 .openClient .socialLink a{
 	color: #fff;
 	opacity: .5;
-	margin-top: 10px;
 	transition: opacity 300ms;
+	display: inline-block;
+	margin-right:5px;
+	height: 16px;
 }
 .openClient .socialLink a:hover{
 	opacity: 0.4;
