@@ -14,13 +14,164 @@ $('.ourClientsCarousel').owlCarousel({
         }
     }
 });
-$('.ourTeamCarousel').owlCarousel({
-    responsive:{
-        900:{
-            items:4
+var owlStageWidth = $(".owl-stage").width();
+var owlItem = $(".ourClientsCarousel .owl-item");
+var owlItemNumber = owlItem.length;
+var owlItemWidth = owlStageWidth/owlItemNumber - 10;
+var owlItemActiveNumber = $(".ourClientsCarousel .owl-item.active").length;
+var sliderNavigation = $(".sliderNavigation");
+var sliderNavigationWidth = sliderNavigation.width();
+var elementNav = sliderNavigation.find(".elementNav" );
+var percentStep;
+$(window).resize(function () {
+    setTimeout(function () {
+        owlStageWidth = $(".owl-stage").width();
+        owlItemWidth = owlStageWidth/owlItemNumber - 10;
+        owlItemActiveNumber = $(".ourClientsCarousel .owl-item.active").length;
+    }, 500);
+    sliderNavigationWidth = sliderNavigation.width();
+});
+$('.ourClientsCarousel').on("drag.owl.carousel", function () {
+    $(".ourClientsCarousel .owl-stage").on("mousemove", function(){
+        percentStep =  100*$(this).position().left/(owlItemWidth * (owlItemNumber - owlItemActiveNumber));
+        if (percentStep < -100){
+            elementNav.css({
+                left:"100%",
+                transition: "inherit"
+            })
+        }else if(percentStep>0){
+            elementNav.css({
+                left:"0",
+                transition: "inherit"
+            })
+        }else{
+            elementNav.css({
+                left: -sliderNavigationWidth/100*percentStep,
+                transition: "inherit"
+            });
+        }
+    })
+});
+$('.ourClientsCarousel').on("dragged.owl.carousel", function () {
+    $(".ourClientsCarousel .owl-stage").off("mousemove");
+    setTimeout(function () {
+        percentStep =  100*$(".ourClientsCarousel .owl-stage").position().left/(owlItemWidth * (owlItemNumber - owlItemActiveNumber));
+        if (percentStep < -100){
+            elementNav.css({
+                left:"100%",
+                transition: "left 300ms"
+            })
+        }else if(percentStep>0){
+            elementNav.css({
+                left:"0",
+                transition: "left 300ms"
+            })
+        }else{
+            elementNav.css({
+                left: -sliderNavigationWidth/100*percentStep,
+                transition: "left 300ms"
+            });
+        }
+    },200);
+});
+$(function () {
+    var currentLanguage = $(".currentLanguage");
+    currentLanguage.on("click", function () {
+        $(this).parent().toggleClass("open");
+    });
+});
+$(function () {
+    var clientBlock=$(".clientBlock");
+    var openClient = {};
+    var openClientBlock = $(".openClient");
+    var openClientContent = openClientBlock.find(".contentBlock");
+    var socialLink=[];
+    clientBlock.on("click", function () {
+        $("body").addClass("modalOpen");
+        var contentClient = $(this).find(".contentClient");
+        openClient = {
+            imgBlock:contentClient.data("imgblock"),
+            institutionClass:contentClient.data("institutionclass"),
+            nameInstitution:contentClient.data("nameinstitution"),
+            socialLinks:{
+                1:{
+                    link:contentClient.data("socinst"),
+                    svgName:"instagrammSvg"
+                },
+                2:{
+                    link:contentClient.data("socfb"),
+                    svgName:"facebookSvg"
+                },
+                3:{
+                    link:contentClient.data("socvk"),
+                    svgName:"vkSvg"
+                }
+            },
+            reviewAboutUs:contentClient.data("review"),
+            client:{
+                name:contentClient.data("nameclient"),
+                position:contentClient.data("positionclient"),
+                photoClient:contentClient.data("photoclient")
+            }
+        };
+        for(var i=1; i <= Object.keys(openClient.socialLinks).length; i++){
+            if(openClient.socialLinks[i].link !== undefined) {
+                socialLink.push('<a target="_blank" href="'+openClient.socialLinks[i].link+'"><svg><use xlink:href="#'+openClient.socialLinks[i].svgName+'"></use></svg></a>');
+            }
+        }
+        openClientContent.append('<div class="textImage flexWrapper justifyContent alignMiddle">' +
+            '<div class="imbBlock"><img src="'+openClient.imgBlock +'" alt=""></div>' +
+            '<div class="textBlock"><div class="headerTextBlock\">' +
+            '<div class="institutionClass">'+openClient.institutionClass +'</div>' +
+            '<div class="nameInstitution inlineBlock alignMiddle">'+openClient.nameInstitution +'</div>' +
+            '<div class="socialLink inlineBlock alignMiddle">'+ socialLink.join("") +'</div></div>' +
+            '<div class="reviewAboutUs"><div class="defaultText">Отзыв о работе с нами:</div>' +
+            '<div class="review"></div>'+openClient.reviewAboutUs +'</div>' +
+            '<div class="footerTextBlock flexWrapper justifyContent"><div class="client">' +
+            '<div class="name">'+ openClient.client.name +',</div>' +
+            '<div class="position">'+ openClient.client.position +'</div></div>' +
+            '<div class="photoClient"><img src="'+ openClient.client.photoClient +'" alt=""></div></div></div></div>');
+        openClientBlock.addClass("justMeFade");
+    });
+    openClientBlock.find(".closeBtn").on("click", function () {
+        $("body").removeClass("modalOpen");
+        openClientBlock.removeClass("justMeFade");
+        socialLink=[];
+        setTimeout(function () {
+            openClientBlock.find(".textImage").remove();
+        },700);
+    });
+    function owlNavigation() {
+        console.log(owlItemNumber);
+        if (owlItemActiveNumber !== owlItemNumber){
+            if ($(".ourClientsCarousel"))
+            elementNav.draggable({
+                axis: "x",
+                containment: "parent",
+                drag : function(event, ui) {
+                    elementNav.css("transition", "inherit");
+                    var leftPercent = ( 100 * parseFloat(ui.position.left) / (parseFloat($(this).parent().css("width"))- elementNav.width()));
+                    $(".owl-stage").css("left", -((owlItemNumber-owlItemActiveNumber)*owlItemWidth + (owlItemNumber-owlItemActiveNumber)*10)/100*leftPercent);
+                }
+            });
+        }else{
+            sliderNavigation.css("display","none");
         }
     }
+    owlNavigation();
 });
+$(".slideBlock").on("mousemove", function(event){
+    var centerWindowWidth = $(window).width()/2;
+    if(centerWindowWidth < event.screenX && 1340-$(document).width()>=1){
+        $(this).find(".slideContent").css("margin-left", -670+(1-$(document).width()/1340)*(1340/$(document).width()*(centerWindowWidth - event.screenX - 100))).css("transition", "200ms");
+    }else if(centerWindowWidth > event.screenX && 1340-$(document).width()>=0){
+        $(this).find(".slideContent").css("margin-left",  -670+(1-$(document).width()/1340)*(1340/$(document).width()*(centerWindowWidth - event.screenX + 50))).css("transition", "200ms");
+    }
+});
+$(".slideBlock").on("mouseleave", function(){
+    $(this).find(".slideContent").css("margin-left", -670).css("transition", "500ms");
+});
+
 //    canvas Script
 var canvas = document.getElementById('nokey'),
     can_w = parseInt(canvas.getAttribute('width')),
@@ -305,71 +456,4 @@ $(function () {
             headerBlock.removeClass("blackHeader");
         }
     })
-});
-$(function () {
-    var currentLanguage = $(".currentLanguage");
-    currentLanguage.on("click", function () {
-        $(this).parent().toggleClass("open");
-    });
-});
-$(function () {
-    var openClient = {};
-    var openClientBlock = $(".openClient");
-    var openClientContent = openClientBlock.find(".contentBlock");
-    var socialLink=[];
-    $(".clientBlock").on("click", function () {
-        $("body").addClass("modalOpen");
-        var contentClient = $(this).find(".contentClient");
-        openClient = {
-            imgBlock:contentClient.data("imgblock"),
-            institutionClass:contentClient.data("institutionclass"),
-            nameInstitution:contentClient.data("nameinstitution"),
-            socialLinks:{
-                1:{
-                    link:contentClient.data("socinst"),
-                    svgName:"instagrammSvg"
-                },
-                2:{
-                    link:contentClient.data("socfb"),
-                    svgName:"facebookSvg"
-                },
-                3:{
-                    link:contentClient.data("socvk"),
-                    svgName:"vkSvg"
-                }
-            },
-            reviewAboutUs:contentClient.data("review"),
-            client:{
-                name:contentClient.data("nameclient"),
-                position:contentClient.data("positionclient"),
-                photoClient:contentClient.data("photoclient")
-            }
-        };
-        for(var i=1; i <= Object.keys(openClient.socialLinks).length; i++){
-            if(openClient.socialLinks[i].link !== undefined) {
-                socialLink.push('<a target="_blank" href="'+openClient.socialLinks[i].link+'"><svg><use xlink:href="#'+openClient.socialLinks[i].svgName+'"></use></svg></a>');
-            }
-        }
-        openClientContent.append('<div class="textImage flexWrapper justifyContent alignMiddle">' +
-            '<div class="imbBlock"><img src="'+openClient.imgBlock +'" alt=""></div>' +
-            '<div class="textBlock"><div class="headerTextBlock\">' +
-            '<div class="institutionClass">'+openClient.institutionClass +'</div>' +
-            '<div class="nameInstitution inlineBlock alignMiddle">'+openClient.nameInstitution +'</div>' +
-            '<div class="socialLink inlineBlock alignMiddle">'+ socialLink.join("") +'</div></div>' +
-            '<div class="reviewAboutUs"><div class="defaultText">Отзыв о работе с нами:</div>' +
-            '<div class="review"></div>'+openClient.reviewAboutUs +'</div>' +
-            '<div class="footerTextBlock flexWrapper justifyContent"><div class="client">' +
-            '<div class="name">'+ openClient.client.name +',</div>' +
-            '<div class="position">'+ openClient.client.position +'</div></div>' +
-            '<div class="photoClient"><img src="'+ openClient.client.photoClient +'" alt=""></div></div></div></div>');
-        openClientBlock.fadeIn("slow");
-    });
-    openClientBlock.find(".closeBtn").on("click", function () {
-        $("body").removeClass("modalOpen");
-        openClientBlock.fadeOut("slow");
-        socialLink=[];
-        setTimeout(function () {
-            openClientBlock.find(".textImage").remove();
-        },700);
-    });
 });
