@@ -788,6 +788,7 @@ body.modalOpen{
 	margin: 0 5px;
 	cursor: pointer;
 	padding: 12px 20px 8px;
+	transition: background 300ms, color 300ms;
 }
 .pricesBlock .tabNav .item.active,
 .pricesBlock .tabNav .item:hover{
@@ -801,7 +802,7 @@ body.modalOpen{
 	text-align: center;
 	padding-bottom: 65px;
 }
-.pricesBlock .tabContent .yearSubscription{
+.pricesBlock .yearSubscription{
 	font-size: 14px;
 	text-align: center;
 	cursor: pointer;
@@ -814,6 +815,21 @@ body.modalOpen{
 .pricesBlock .container{
 	max-width: 880px;
 	padding: 0;
+}
+.pricesBlock .tabContent .item{
+	opacity: 0;
+	transform: translate3d(-100%,0,0);
+	transition-property: opacity;
+	transition-timing-function: ease;
+	transition: opacity 1200ms;
+	position: absolute;
+	z-index: -1;
+}
+.pricesBlock .tabContent .item.active{
+	opacity: 1;
+	transform: none;
+	position: relative;
+	z-index: auto;
 }
 .pricesBlock .tabContent .flexItem{
 	background: #f3f5f6;

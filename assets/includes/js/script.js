@@ -171,6 +171,15 @@ $(".slideBlock").on("mousemove", function(event){
 $(".slideBlock").on("mouseleave", function(){
     $(this).find(".slideContent").css("margin-left", -670).css("transition", "500ms");
 });
+$(function () {
+    $(".pricesBlock .tabNav .item").on("click", function () {
+        var priceName = $(this).data("name-price");
+        console.log(priceName);
+        $(this).addClass("active").siblings().removeClass("active");
+        $(".tabContent .item").siblings().removeClass("active");
+        $(".tabContent").find("[data-name='"+priceName+"']").addClass("active");
+    })
+});
 
 //    canvas Script
 var canvas = document.getElementById('nokey'),
