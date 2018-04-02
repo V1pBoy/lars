@@ -174,11 +174,27 @@ $(".slideBlock").on("mouseleave", function(){
 $(function () {
     $(".pricesBlock .tabNav .item").on("click", function () {
         var priceName = $(this).data("name-price");
-        console.log(priceName);
         $(this).addClass("active").siblings().removeClass("active");
-        $(".tabContent .item").siblings().removeClass("active");
-        $(".tabContent").find("[data-name='"+priceName+"']").addClass("active");
+        $(".pricesBlock .tabContent .item").siblings().removeClass("active");
+        $(".pricesBlock .tabContent").find("[data-name='"+priceName+"']").addClass("active");
+    });
+    $(".openPrices .tabNav .item").on("click", function () {
+        var priceName = $(this).data("name-price");
+        $(this).addClass("active").siblings().removeClass("active");
+        $(".openPrices .contentBlock .item").siblings().removeClass("active");
+        $(".openPrices .contentBlock").find("[data-name='"+priceName+"']").addClass("active");
     })
+});
+$(function () {
+    var openClientBlock = $(".openPrices");
+    $(".pricesBlock .yearSubscription").on("click", function () {
+        $("body").addClass("modalOpen");
+        openClientBlock.addClass("justMeFade");
+    });
+    openClientBlock.find(".closeBtn").on("click", function () {
+        $("body").removeClass("modalOpen");
+        openClientBlock.removeClass("justMeFade");
+    });
 });
 
 //    canvas Script

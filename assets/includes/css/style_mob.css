@@ -115,4 +115,59 @@
 	.openClient .photoClient{
 		margin: 0 auto 15px;
 	}
+	.openPrices{
+		padding: 30px 0;
+	}
+	.openPrices .tabNav .item{
+		flex-basis: 50%;
+		margin: 0;
+		font-size: 18px;
+	}
+	.openPrices .closeBtn{
+		margin-bottom: 35px;
+	}
+	.openPrices .contentBlock{
+		padding: 20px 0;
+		margin-bottom: 10px;
+	}
+	.openPrices .tablePrices .nameRow{
+		flex-basis: 100%;
+		padding-left: inherit;
+		text-align: center;
+		font-size: 12px;
+		margin-bottom: 25px;
+	}
+	.openPrices .tablePrices .priceBlock .namePackage{
+		font-size: 14px;
+		margin-bottom: 13px;
+	}
+	.openPrices .tablePrices .nameRow br{
+		display: none;
+	}
+	.openPrices .tablePrices .priceBlock{
+		flex-basis: calc(100%/3);
+		font-size: 11px;
+	}
+	.openPrices .tablePrices .priceBlock .price{
+		font-size: 28px;
+	}
+	.openPrices .tablePrices .tableHead{
+		padding-bottom: 20px;
+	}
+	.openPrices .tablePrices .tableBody .tableRow:nth-child(even){
+		background: transparent;
+	}
+	.openPrices .tablePrices .tableBody .noneMob{
+		display: none;
+	}
+	.openPrices .tablePrices .tableRow:last-child .flexItem{
+		padding: 0;
+		flex-basis: 100%;
+		text-align: center;
+	}
+	.openPrices .tablePrices .tableBody .nameRow {
+		background: rgba(255, 255, 255, 0.1);
+		margin-bottom: 0;
+		padding: 10px 8px;
+	}
 }
