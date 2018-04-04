@@ -79,6 +79,14 @@ $(function () {
 	currentLanguage.on("click", function () {
 		$(this).parent().toggleClass("open");
 	});
+	$(document).on("click",function(e){ //Here is when you click in your entire document
+		if(e.target.className !== "currentLanguage"){
+			currentLanguage.parent().removeClass("open");
+		}
+		// if($(e.target).closest('p').length==0) { // If click is not paragraph
+		// 	console.log(e);
+		// }
+	})
 });
 $(function () {
 	var clientBlock = $(".clientBlock");
