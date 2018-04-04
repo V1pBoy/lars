@@ -27,14 +27,20 @@ body.modalOpen{
 	color: #fff;
 	text-decoration: none;
 }
-.headerBlock .logoLanguageBlock {
+.headerBlock .languageBlock {
 	font-family: "museo700";
 	transition: transform 300ms;
 }
-.headerBlock .logoLanguageBlock .logo{
+.headerBlock .headerContent{
+	flex-basis: calc(100% - 65px);
+}
+.headerBlock .logoBlock .logo{
 	margin-right: 10px;
 }
-.headerBlock .logoLanguageBlock ul {
+.headerBlock .logoBlock .mobHamburger{
+	display: none;
+}
+.headerBlock .languageBlock ul {
 	display: none;
 	position: absolute;
 	background: #000;
@@ -45,24 +51,26 @@ body.modalOpen{
 	left: 0;
 }
 
-.headerBlock .logoLanguageBlock ul > li {
+.headerBlock .languageBlock ul > li {
 	margin-bottom: 10px;
 }
 
-.headerBlock .logoLanguageBlock ul > li:hover {
+.headerBlock .languageBlock ul > li:hover {
 	opacity: 0.3;
 	cursor: pointer;
 }
 
-.headerBlock .logoLanguageBlock ul > li:last-child {
+.headerBlock .languageBlock ul > li:last-child {
 	margin-bottom: 0;
 }
 
 .headerBlock .languageBlock.open ul {
 	display: block;
 }
-
-.headerBlock .logoLanguageBlock .languageBlock {
+.headerBlock .languageBlock ul .chooseLang{
+	display: none;
+}
+.headerBlock .languageBlock {
 	position: relative;
 	color: #fff;
 	font-size: 10px;
@@ -70,7 +78,7 @@ body.modalOpen{
 	transition: font-size 300ms;
 	min-width:65px;
 }
-.headerBlock .logoLanguageBlock .languageBlock:hover{
+.headerBlock .languageBlock:hover{
 	font-size: 14px;
 }
 .headerBlock .languageBlock .currentLanguage{
@@ -81,12 +89,12 @@ body.modalOpen{
 	background: #000;
 	border-color:rgba(255, 255, 255, 0.2);
 }
-.headerBlock .logoLanguageBlock .currentLanguage .svgBlock{
+.headerBlock .currentLanguage .svgBlock{
 	width: 6px;
 	height: 4px;
 	margin-left: 4px;
 }
-.headerBlock .logoLanguageBlock .currentLanguage svg{
+.headerBlock .currentLanguage svg{
 	fill:currentColor;
 }
 .headerBlock .listMenu {
@@ -847,7 +855,7 @@ body.modalOpen{
 }
 .pricesBlock .tabContent .flexItem.aboutPackages a{
 	color:#585858;
-	border-bottom: 1px solid #585858;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
 	display: inline-block;
 	margin-top: 16px;
 	font-family: "museo500";
@@ -874,6 +882,7 @@ body.modalOpen{
 	background-color: #d72234;
 	font-family: "museo500";
 	color: #fff;
+	text-align: center;
 }
 .pricesBlock .tabContent .btnBlock a:hover{
 	opacity: 0.8;
@@ -1004,7 +1013,7 @@ body.modalOpen{
 	background-color: #5ad766;
 }
 .openPrices .tablePrices .tableRow:last-child .flexItem{
-	padding: 40px 0;
+	padding: 40px 5px;
 }
 .openPrices .tablePrices a{
 	color: #fff;

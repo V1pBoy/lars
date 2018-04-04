@@ -1,4 +1,168 @@
 @media (max-width: 767px){
+	.headerBlock .logoBlock{
+		width: 100%;
+	}
+	.headerBlock .headerContent {
+		position: fixed;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		flex-direction: column;
+		background: rgba(0,0,0,.9);
+		height: 0;
+		width: 100%;
+		left:0;
+		top:0;
+		opacity: 0;
+		z-index: -1;
+		-webkit-transform: scale(0.8);
+		-moz-transform: scale(0.8);
+		-ms-transform: scale(0.8);
+		transform: scale(0.8);
+		-webkit-transition: opacity 0.3s, transform 0.3s;
+		-moz-transition: opacity 0.3s, transform 0.3s;
+		transition: opacity 0.3s, transform 0.3s;
+	}
+	.headerBlock .headerContent.justMeFade{
+		opacity: 1;
+		z-index: 999;
+		justify-content: baseline;
+		padding: 0 20px;
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+		height: 100%;
+	}
+	.headerBlock .headerContent .languageBlock,
+	.headerBlock .headerContent .listMenu,
+	.headerBlock .headerContent .loginBtn{
+		transform: scale(0);
+		opacity: 0;
+		transition: opacity 0.3s, transform 1s;
+	}
+	.headerBlock .headerContent.justMeFade .languageBlock,
+	.headerBlock .headerContent.justMeFade .listMenu,
+	.headerBlock .headerContent.justMeFade .loginBtn{
+		opacity: 1;
+		transform: scale(1);
+		transition: opacity 0.3s, transform 0.5s;
+	}
+	.headerBlock .logoBlock .mobHamburger{
+		display: block;
+		color: #fff;
+		cursor: pointer;
+	}
+	.headerBlock .logoBlock .mobHamburger svg{
+		fill:currentColor;
+		height: 15px;
+		width: 22px;
+	}
+	.headerBlock .listMenu{
+		font-size: 14px;
+		text-align: center;
+		margin-top: 70px;
+		padding-bottom: 25px;
+		border-bottom: 1px solid rgba(255,255,255, 0.2);
+		margin-bottom: 25px;
+		width: 100%;
+	}
+	.headerBlock .listMenu > li{
+		display: block;
+		padding: 0;
+		margin-bottom: 20px;
+	}
+	.headerBlock .loginBtn{
+		flex-basis: initial;
+		padding: 0 10px 25px 10px;
+		margin-bottom: 10px;
+		border-bottom: 1px solid rgba(255,255,255, 0.2);
+		width: 100%;
+	}
+	.headerBlock .loginBtn .connectBtn{
+		opacity: 1;
+		transform: none;
+		transition: inherit;
+	}
+	.headerBlock .loginBtn a{
+		flex-basis: 48%;
+		padding: 9px 15px;
+	}
+	.headerBlock .loginBtn .signIn{
+		left: inherit;
+		margin-left: 0;
+	}
+	.headerBlock .languageBlock{
+		order: 3;
+		width: 100%;
+	}
+	.headerBlock .languageBlock:hover{
+		font-size: 10px;
+	}
+	.headerBlock .languageBlock .currentLanguage{
+		display: none;
+	}
+	.headerBlock .languageBlock ul{
+		display: block;
+		width: 100%;
+		border: none;
+		padding: 0;
+		font-size: 0;
+		text-align: center;
+	}
+	.headerBlock .languageBlock ul > li{
+		margin-bottom: 0;
+		width: 50px;
+		display: inline-block;
+		text-align: center;
+		font-family: "museo500";
+		font-size: 10px;
+	}
+	.headerBlock .languageBlock ul .chooseLang{
+		display: inline-block;
+	}
+	.headerBlock .languageBlock ul .chooseLang a{
+		color: #585858;
+	}
+	.pricesBlock .tabNav .item{
+		font-size: 18px;
+		padding: 7px 20px;
+	}
+	.pricesBlock .tabContent .item{
+		padding: 0 10px;
+	}
+	.pricesBlock .tabContent .flexItem{
+		flex-basis: 100%;
+		max-width: 100%;
+		padding: 20px 115px 20px 20px;
+		text-align: left;
+		position: relative;
+	}
+	.pricesBlock .tabContent .titlePackage{
+		margin-bottom: 5px;
+	}
+	.pricesBlock .tabContent .descPackage{
+		font-size: 10px;
+		margin-bottom: 10px;
+	}
+	.pricesBlock .tabContent .btnBlock a{
+		font-size: 10px;
+		padding: 11px 30px;
+	}
+	.pricesBlock .tabContent .pricePackage{
+		font-size: 40px;
+		position: absolute;
+		right: 20px;
+		top:20px;
+	}
+	.pricesBlock .tabContent .flexItem.aboutPackages{
+		padding: 25px 15px 35px;
+		text-align: center;
+		font-size: 12px;
+	}
+	.pricesBlock .tabContent .flexItem.aboutPackages a{
+		font-size: 14px;
+	}
 	.featuresBlock{
 		padding: 50px 0;
 	}
@@ -11,12 +175,40 @@
 	}
 	.featuresBlock .flexItem{
 		padding: 0 10px;
+		position: relative;
+	}
+	.featuresBlock .svgBlock{
+		height: 100px;
+		width: 100px;
+		margin-bottom: 20px;
+	}
+	.featuresBlock .svgBlock svg{
+		max-height: 58px;
+		width: 50px;
 	}
 	.featuresBlock .titleItem{
 		font-size: 14px;
 	}
 	.featuresBlock .descriptionItem{
 		font-size: 12px;
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		background: rgba(255, 255, 255, 0.9);
+		opacity: 0;
+		z-index: -1;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		align-items: center;
+		transition: opacity 500ms;
+	}
+	.featuresBlock .flexItem.active .descriptionItem{
+		opacity: 1;
+		z-index: 1;
 	}
 	.contactUsBlock {
 		background-position: calc(100% + 650px) center;

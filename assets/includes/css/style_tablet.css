@@ -1,9 +1,32 @@
 @media(max-width: 1199px){
+	.featuresBlock .flexItem{
+		flex-basis: 50%;
+		margin-bottom: 10px;
+	}
 	.contactUsBlock{
 		background-position: calc(100% + 700px) -50px;
 	}
+	.headerBlock .listMenu > li {
+		padding: 0 15px;
+	}
+	.headerBlock .listMenu {
+		font-size: 10px;
+	}
 }
 @media (max-width: 991px){
+	.headerBlock .logoBlock .logo{
+		margin-right: 5px;
+		width: 30px;
+	}
+	.headerBlock .logoBlock .logo img{
+		max-width: 100%;
+	}
+	.headerBlock .listMenu{
+		font-size: 8px;
+	}
+	.headerBlock .listMenu > li{
+		padding: 0 3px;
+	}
 	.featuresBlock .flexItem{
 		flex-basis: 50%;
 	}
