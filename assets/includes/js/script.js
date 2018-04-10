@@ -224,7 +224,7 @@ $(function () {
 });
 
 $.fn.isInViewport = function() {
-    var elementTop = $(this).offset().top;
+    var elementTop = $(this).offset().top + $(window).height() * 0.2;
     var elementBottom = elementTop + $(this).outerHeight();
 
     var viewportTop = $(window).scrollTop();
@@ -232,25 +232,6 @@ $.fn.isInViewport = function() {
 
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
-
-$(function () {
-    var lastScrollTop = 0;
-    $(window).on('resize scroll', function() {
-        var st = $(this).scrollTop();
-        if (st > lastScrollTop){
-            if($(".firstSteps").isInViewport()){
-                if(!$(".firstSteps").hasClass("active")){
-                    $(".firstSteps").addClass("active");
-                }
-            }
-        }else {
-            if(!$(".firstSteps").isInViewport()){
-                $(".firstSteps").removeClass("active");
-            }
-        }
-        lastScrollTop = st;
-    });
-});
 
 //    canvas Script
 var canvas = document.getElementById('nokey'),

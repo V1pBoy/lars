@@ -1,3 +1,9 @@
+#Divy{
+	height: 50px;
+	width: 50px;
+	position: relative;
+	background: red;
+}
 body {
 	font-family: "museo500";
 	background: #000;
@@ -394,8 +400,12 @@ body.modalOpen{
 	display: inherit;
 }
 .ourClients{
-	padding: 157px 0 137px;
 	position: relative;
+	padding-bottom: 137px;
+}
+.ourClients .scrollBlock{
+	right: 0;
+
 }
 .ourClients .titleBlock{
 	font-size: 36px;
@@ -404,6 +414,8 @@ body.modalOpen{
 	line-height: 1.5;
 	margin-bottom: 55px;
 	text-align: center;
+	position: relative;
+	padding-top: 157px;
 }
 .ourClients .ourClientsCarousel{
 	margin-bottom: 60px;
@@ -413,6 +425,7 @@ body.modalOpen{
 	margin: 0 auto 50px;
 	transition: 300ms;
 	cursor: pointer;
+	position: relative;
 }
 .ourClients .ourClientsCarousel .clientBlock:hover{
 	opacity: .6;
@@ -685,7 +698,6 @@ body.modalOpen{
 	position: relative;
 	max-width: 190px;
 	text-align: center;
-	height: 150px;
 	margin: 0 auto 15px;
 }
 .howItWorks .wifiStep:before{
