@@ -2,6 +2,9 @@ a{
 	text-decoration: none;
 	display: block;
 }
+.scrollBlock{
+	right: 0;
+}
 .container{
 	max-width: 1340px;
 	padding: 0 30px;
@@ -47,6 +50,11 @@ a{
 }
 .borderTopGray{
 	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+@media(max-width: 1199px){
+	.scrollBlock{
+		position: relative!important;
+	}
 }
 @media only screen and (min-width : 768px) and (max-width : 1199px){
 	.container{

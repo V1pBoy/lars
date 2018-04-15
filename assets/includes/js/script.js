@@ -23,6 +23,17 @@ var sliderNavigation = $(".sliderNavigation");
 var sliderNavigationWidth = sliderNavigation.width();
 var elementNav = sliderNavigation.find(".elementNav");
 var percentStep;
+var ourClientsAnimationDuration = 2500;
+var ourHowItWorksAnimationDuration = 4000;
+var lastState = "";
+function currentResponsiveState() {
+    var desktopMinWidth = 1200;
+    var tabletMinWidth = 768;
+    var screenWidth = $(window).width();
+    if (screenWidth >= desktopMinWidth) return 'desktop';
+    if (screenWidth >= tabletMinWidth) return 'tablet';
+    return 'mobile';
+}
 $(window).resize(function () {
     setTimeout(function () {
         owlStageWidth = $(".owl-stage").width();
@@ -151,7 +162,6 @@ $(function () {
     });
 
     function owlNavigation() {
-        console.log(owlItemNumber);
         if (owlItemActiveNumber !== owlItemNumber) {
             if ($(".ourClientsCarousel"))
                 elementNav.draggable({
@@ -222,25 +232,102 @@ $(function () {
         $(this).addClass("active").siblings().removeClass("active");
     })
 });
+function animate() {
+    var controller = $.superscrollorama({
+        triggerAtCenter: true,
+        playoutAnimations: true,
+        reverse:false
+    });
+    controller.pin($('.ourClients .scrollBlock'), ourClientsAnimationDuration, {
+        anim: (new TimelineLite())
+            .append(
+                TweenMax.to($('.ourClients .titleBlock'), 1,
+                    {css:{top:0}})
+            )
+            .append([
+                TweenMax.fromTo($('.ourClients .firstBlock'), 1.25,
+                    {css:{top: 300, opacity:0}},
+                    {css:{top: 0, opacity:1}}),
+                TweenMax.fromTo($('.ourClients .secondBlock'), 1.25,
+                    {css:{top: 500, opacity:0}},
+                    {css:{top: 0, opacity:1}}),
+                TweenMax.fromTo($('.ourClients .thirdBlock'), 1.25,
+                    {css:{top: 700, opacity:0}},
+                    {css:{top: 0, opacity:1}}),
+                TweenMax.fromTo($('.ourClients .sliderNavigation'), 1.25,
+                    {css:{top: 900, opacity:0}},
+                    {css:{top: 0, opacity:1}})
+            ])
 
-$.fn.isInViewport = function() {
-    var elementTop = $(this).offset().top + $(window).height() * 0.2;
-    var elementBottom = elementTop + $(this).outerHeight();
-
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
-
-    return elementBottom > viewportTop && elementTop < viewportBottom;
-};
-
+    });
+    controller.pin($('.howItWorks .scrollBlock'), ourHowItWorksAnimationDuration, {
+        anim: (new TimelineLite())
+            .append(
+                TweenMax.fromTo($('.howItWorks .tracks'), .8,
+                    {css:{top:600}},
+                    {css:{top:0}}))
+            .append(
+                TweenMax.to($('.howItWorks .tracks .numbers'), .5,
+                    {css:{'font-size': 77}})
+            )
+            .append([
+                TweenMax.to($('.howItWorks .tracks .after'), .5,
+                    {css:{opacity: 1, right:0}}),
+                TweenMax.to($('.howItWorks .tracks .before'), .5,
+                    {css:{opacity: 1, left:0}}),
+                TweenMax.to($('.howItWorks .genre'), .5,
+                    {css:{opacity: 1, left:0}}),
+                TweenMax.to($('.howItWorks .genre .before'), .5,
+                    {css:{opacity: 1, left:0}}),
+                TweenMax.to($('.howItWorks .institution'), .5,
+                    {css:{opacity: 1, right:0}}),
+                TweenMax.to($('.howItWorks .institution .after'), .5,
+                    {css:{opacity: 1, right:0}})
+            ])
+            .append([
+                TweenMax.to($('.howItWorks .servers'), 1,
+                    {css:{opacity: 1, left:0}}),
+                TweenMax.to($('.howItWorks .brands'), 1,
+                    {css:{opacity: 1, right:0}})
+            ])
+            .append([
+                TweenMax.to($('.howItWorks .wifiStep'), .5,
+                    {css:{opacity: 1, top:0}}),
+                TweenMax.to($('.howItWorks .laptop'), 1.5,
+                    {css:{opacity: 1, top:0}}),
+                TweenMax.to($('.howItWorks .laptop .logoBlock'), 1,
+                    {css:{top:100}}),
+                TweenMax.to($('.howItWorks .laptop .content'), 1,
+                    {css:{top:230}})
+            ])
+            .append(
+                TweenMax.to($('.howItWorks .loudspeaker'), 0.1,
+                    {css:{opacity:1}})
+            )
+            .append([
+                TweenMax.to($('.howItWorks .loudspeaker.left'),1 ,
+                    {css:{left: 0}, immediateRender:true}),
+                TweenMax.to($('.howItWorks .loudspeaker.left .line'),2,
+                    {css:{width: 180}}),
+                TweenMax.to($('.howItWorks .loudspeaker.right .line'),2,
+                    {css:{width: 180}}),
+                TweenMax.to($('.howItWorks .loudspeaker.right'), 1,
+                    {css:{right: 0}})
+            ])
+            .append([
+                TweenMax.to($('.howItWorks .loudspeaker.left .content'), .5,
+                    {css:{left:15,opacity: 1}}),
+                TweenMax.to($('.howItWorks .loudspeaker.right .content'), .5,
+                    {css:{right:15,opacity: 1}})
+            ])
+    });
+}
+animate();
 //    canvas Script
 var canvas = document.getElementById('nokey'),
     can_w = parseInt(canvas.getAttribute('width')),
     can_h = parseInt(canvas.getAttribute('height')),
     ctx = canvas.getContext('2d');
-
-// console.log(typeof can_w);
-
 var ball = {
         x: 0,
         y: 0,
@@ -305,7 +392,6 @@ function randomNumFrom(min, max) {
     return Math.random() * (max - min) + min;
 }
 
-console.log(randomNumFrom(0, 10));
 
 // Random Ball
 function getRandomBall() {
@@ -479,7 +565,6 @@ function initCanvas() {
 }
 
 window.addEventListener('resize', function (e) {
-    console.log('Window Resize...');
     initCanvas();
 });
 
@@ -493,12 +578,10 @@ goMovie();
 
 // Mouse effect
 canvas.addEventListener('mouseenter', function () {
-    console.log('mouseenter');
     mouse_in = true;
     balls.push(mouse_ball);
 });
 canvas.addEventListener('mouseleave', function () {
-    console.log('mouseleave');
     mouse_in = false;
     var new_balls = [];
     Array.prototype.forEach.call(balls, function (b) {

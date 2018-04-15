@@ -362,4 +362,93 @@
 		margin-bottom: 0;
 		padding: 10px 8px;
 	}
+	.howItWorks{
+		background-size: auto;
+	}
+
+	.howItWorks .firstSteps .flexItem{
+		display: none;
+	}
+	.howItWorks .firstSteps .flexItem .before,
+	.howItWorks .firstSteps .flexItem .after{
+		display: none;
+	}
+	.howItWorks .firstSteps .flexItem.tracks{
+		display: block;
+	}
+	.howItWorks .firstSteps .flexItem.tracks .numbers{
+		font-size: 40px;
+		margin-bottom: 5px;
+	}
+	.howItWorks .firstSteps .flexItem.tracks .text{
+		font-size: 12px;
+	}
+	.howItWorks .secondStep {
+		margin-bottom: 80px;
+	}
+	.howItWorks .secondStep .laptop{
+		height: 146px;
+		background-size: contain;
+		order: 1;
+		flex-basis: 100%;
+		margin-bottom: 140px;
+	}
+	.howItWorks .secondStep .laptop:after{
+		content: "";
+		position: absolute;
+		width: 1px;
+		height: 15px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		background-color: rgba(255,255,255,.3);
+		bottom:-25px;
+	}
+	.howItWorks .secondStep .laptop .logoBlock{
+		padding: 0 10px;
+		top: 45px !important;
+		vertical-align: baseline;
+	}
+	.howItWorks .secondStep .laptop .logoBlock .svgBlock{
+		width: 28px;
+	}
+	.howItWorks .secondStep .laptop .name{
+		font-size: 10px;
+	}
+	.howItWorks .secondStep .laptop .content{
+		top: 125px!important;
+	}
+	.howItWorks .secondStep .loudspeaker{
+		flex-basis: 50%;
+		order: 2;
+		background-position: center!important;
+		background-size: 75px;
+		height: 120px;
+	}
+	.howItWorks .secondStep .loudspeaker .content{
+		position: relative!important;
+		display: block!important;
+	}
+	.howItWorks .secondStep .loudspeaker .line{
+		width: 15%!important;
+	}
+	.howItWorks .secondStep .loudspeaker.right:after{
+		content: "";
+		position: absolute;
+		left: -1px;
+		height: 100%;
+		width: 1px;
+		top:-60px;
+		background-color: rgba(255,255,255,0.3);
+	}
+	.howItWorks .secondStep .loudspeaker.left .content{
+		display: none!important;
+	}
+	.howItWorks .secondStep .loudspeaker.right .content{
+		top: 140px!important;
+		right: 50%!important;
+	}
+	.howItWorks .secondStep .loudspeaker.right .content br{
+		display: none;
+	}
 }

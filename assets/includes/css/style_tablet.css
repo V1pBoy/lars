@@ -1,4 +1,82 @@
 @media(max-width: 1199px){
+	.superscrollorama-pin-spacer{
+		height: inherit!important;
+	}
+	.ourClients{
+		min-height: inherit;
+	}
+	.ourClients .ourClientsCarousel .clientBlock{
+		position: inherit;
+		opacity: 1!important;
+	}
+	.ourClients .sliderNavigation{
+		position: relative;
+		top: inherit!important;
+		opacity: 1!important;
+	}
+	.howItWorks{
+		min-height: inherit;
+	}
+	.howItWorks .firstSteps .flexItem{
+		left: inherit!important;
+		right: inherit!important;
+		opacity: 1!important;
+		top:auto!important;
+	}
+	.howItWorks .firstSteps .flexItem.tracks .numbers{
+		font-size: 48px!important;
+	}
+	.howItWorks .firstSteps .flexItem .after{
+		opacity: 1 !important;
+		right: 0 !important;
+	}
+	.howItWorks .firstSteps .flexItem .before{
+		opacity: 1 !important;
+		left: 0 !important;
+	}
+	.howItWorks .firstSteps .flexItem.genre .numbers,
+	.howItWorks .firstSteps .flexItem.institution .numbers{
+		font-size: 36px;
+	}
+	.howItWorks .firstSteps .flexItem.brands .numbers{
+		font-size: 30px;
+	}
+	.howItWorks .firstSteps .flexItem.servers{
+		font-size: 9px;
+	}
+	.howItWorks .wifiStep{
+		top: 0!important;
+		opacity: 1!important;
+	}
+	.howItWorks .secondStep .flexItem{
+		left: inherit!important;
+		right: inherit!important;
+		top: inherit!important;
+		opacity: 1!important;
+	}
+	.howItWorks .secondStep .laptop{
+		flex-basis: 420px;
+		background-size: 420px auto;
+	}
+	.howItWorks .secondStep .laptop .logoBlock{
+		top:100px !important;
+	}
+	.howItWorks .secondStep .laptop .content{
+		position: inherit;
+		top: 200px!important;
+	}
+	.howItWorks .secondStep .loudspeaker{
+		background-size: 100px auto;
+	}
+	.howItWorks .secondStep .loudspeaker .content{
+		left: inherit!important;
+		right: inherit!important;
+		opacity: 1!important;
+		top: 200px!important;
+	}
+	.howItWorks .secondStep .loudspeaker.right .content{
+		right: 0!important;
+	}
 	.featuresBlock .flexItem{
 		flex-basis: 50%;
 		margin-bottom: 10px;
@@ -11,6 +89,9 @@
 	}
 	.headerBlock .listMenu {
 		font-size: 10px;
+	}
+	.ourClients .titleBlock{
+		position: inherit;
 	}
 }
 @media (max-width: 991px){
