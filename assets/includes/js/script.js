@@ -323,6 +323,20 @@ function animate() {
     });
 }
 animate();
+$(function () {
+    $(".signIn, .connectBtn, .reviewForm").on("click", function (e) {
+        e.preventDefault();
+        var showForm = $(this).data("name");
+        var modalFormBlock = $(".modalFormBlock");
+        var closeBtnForm = modalFormBlock.find(".closeBtn");
+        $("body").addClass("modalOpen");
+        modalFormBlock.addClass(showForm+" justMeFade");
+        closeBtnForm.on("click", function () {
+            modalFormBlock.removeClass(showForm+" justMeFade");
+            $("body").removeClass("modalOpen");
+        });
+    })
+});
 //    canvas Script
 var canvas = document.getElementById('nokey'),
     can_w = parseInt(canvas.getAttribute('width')),

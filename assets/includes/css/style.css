@@ -1135,9 +1135,128 @@ body.modalOpen{
 .openPrices .closeBtn svg{
 	fill: currentColor;
 }
+.modalFormBlock{
+	position: fixed;
+	height: 100%;
+	top: 0;
+	background: #000;
+	width: 100%;
+	z-index: -1;
+	opacity: 0;
+	transition: opacity 0.3s, z-index 0.3s;
+}
+.modalFormBlock.justMeFade{
+	opacity: 1;
+	z-index: 999
+}
+.modalFormBlock .item{
+	width: 395px;
+	margin: 0 auto;
+	display: none;
+}
+.modalFormBlock.loginForm .loginForm,
+.modalFormBlock.askQuestionForm .askQuestionForm,
+.modalFormBlock.registerForm .registerForm{
+	display: block;
+}
+.modalFormBlock .askQuestionForm,
+.modalFormBlock .registerForm{
+	width: 494px;
+}
+.modalFormBlock .headerForm{
+	padding-bottom: 38px;
+	margin-bottom: 38px;
+	font-size: 28px;
+	border-bottom: 1px solid rgba(255,255,255,.3);
+	position: relative;
+	font-family: "museo700"
+}
+.modalFormBlock .headerForm .closeBtn{
+	position: absolute;
+	right: 0;
+	width: 29px;
+	fill: #a9a9a9;
+	opacity: 0.5;
+	cursor: pointer;
+	top:0;
+	transition: opacity 300ms;
+}.modalFormBlock .headerForm .closeBtn:hover{
+	opacity: 0.3;
+ }
+.modalFormBlock label{
+	font-family: "museo300";
+	margin-bottom: 10px;
+	display: block;
+}
+.modalFormBlock .askQuestionForm label{
+	padding-top: 14px;
+}
+.modalFormBlock .formGroup{
+	margin-bottom: 25px;
+}
+.modalFormBlock .formControl{
+	border-radius: 2px;
+	background: rgba(255,255,255,.3);
+	width: 100%;
+	color: #fff;
+	height: 41px;
+	padding-left: 15px;
+	font-family: "museo300";
+	outline: none;
+}
+.modalFormBlock .textArea{
+	max-width: 312px;
+	min-width: 312px;
+	min-height: 121px;
+	padding-top: 15px;
+}
+.modalFormBlock .askQuestionForm .formControl,
+.modalFormBlock .registerForm .formControl{
+	width: 312px;
+}
+.modalFormBlock select.formControl option{
+	color: #000;
+}
+.modalFormBlock .submitBtn{
+	padding: 14px 55px;
+	font-size: 12px;
+	font-family: "museo500";
+	background-color: #ffffff;
+	border-radius: 2px;
+	cursor: pointer;
+	outline: none;
+	text-transform: uppercase;
+}
+.modalFormBlock .askQuestionForm .submitGroup,
+.modalFormBlock .registerForm .submitGroup{
+	margin-top: 10px;
+	padding-top: 28px;
+	border-top:1px solid rgba(255,255,255,.25);
+}
+.modalFormBlock .registerForm .agreeSentForm{
+	margin-bottom: 25px;
+	font-size: 10px;
+	font-family: "museo500";
+	line-height: 14px;
+	color: #909090;
+	padding-top: 20px;
+	margin-top: 15px;
+	border-top:1px solid rgba(255,255,255,.25);
+}
+.modalFormBlock .formLink{
+	display: inline-block;
+	padding-bottom: 5px;
+	border-bottom: 1px solid rgba(255,255,255, .25);
+	color: #fff;
+}
 @media (max-height: 860px){
 	.openPrices{
 		align-items: inherit !important;
 		padding-top: 50px;overflow-y: auto;
+	}
+	.modalFormBlock{
+		align-items: inherit !important;
+		padding: 50px;
+		overflow-y: scroll;
 	}
 }

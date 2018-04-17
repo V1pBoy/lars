@@ -12,7 +12,6 @@
 	<link rel="stylesheet" href="assets/includes/css/style.css">
 	<link rel="stylesheet" href="assets/includes/css/style_tablet.css">
 	<link rel="stylesheet" href="assets/includes/css/style_mob.css">
-	<link rel="stylesheet" href="assets/includes/css/animate.css">
 </head>
 <body>
 <div class="socialLinksSvg">
@@ -95,10 +94,10 @@
 					</ul>
 					<div class="loginBtn">
 						<div class="flexWrapper centerContent">
-							<a href="#" class="signIn">
+							<a href="#" class="signIn" data-name="loginForm">
 								Войти
 							</a>
-							<a href="#" class="connectBtn">
+							<a href="#" class="connectBtn" data-name="registerForm">
 								Подключиться
 							</a>
 						</div>
@@ -819,7 +818,7 @@
 							Если вас интерисует минимальная цена то этот вариант для вас
 						</div>
 						<div class="btnBlock">
-							<a href="#" class="link">Подключиться</a>
+							<a href="#" class="link connectBtn" data-name="registerForm">Подключиться</a>
 						</div>
 					</div>
 					<div class="flexItem">
@@ -833,7 +832,7 @@
 							Основная наша подписка, подойдет большенству заведений
 						</div>
 						<div class="btnBlock">
-							<a href="#" class="link">Подключиться</a>
+							<a href="#" class="link connectBtn" data-name="registerForm">Подключиться</a>
 						</div>
 					</div>
 					<div class="flexItem">
@@ -847,7 +846,7 @@
 							Максимальная подписка удовлетварит все ваши запросы
 						</div>
 						<div class="btnBlock">
-							<a href="#" class="link">Подключиться</a>
+							<a href="#" class="link connectBtn" data-name="registerForm">Подключиться</a>
 						</div>
 					</div>
 					<div class="flexItem aboutPackages">
@@ -877,7 +876,7 @@
 							Если вас интерисует минимальная цена то этот вариант для вас
 						</div>
 						<div class="btnBlock">
-							<a href="#" class="link">Подключиться</a>
+							<a href="#" class="link connectBtn" data-name="registerForm">Подключиться</a>
 						</div>
 					</div>
 					<div class="flexItem">
@@ -891,7 +890,7 @@
 							Основная наша подписка, подойдет большенству заведений
 						</div>
 						<div class="btnBlock">
-							<a href="#" class="link">Подключиться</a>
+							<a href="#" class="link connectBtn" data-name="registerForm">Подключиться</a>
 						</div>
 					</div>
 					<div class="flexItem">
@@ -905,7 +904,7 @@
 							Максимальная подписка удовлетварит все ваши запросы
 						</div>
 						<div class="btnBlock">
-							<a href="#" class="link">Подключиться</a>
+							<a href="#" class="link connectBtn" data-name="registerForm">Подключиться</a>
 						</div>
 					</div>
 					<div class="flexItem aboutPackages">
@@ -1410,13 +1409,13 @@
 								<div class="flexWrapper alignMiddle">
 									<div class="flexItem nameRow noneMob"></div>
 									<div class="flexItem priceBlock noneMob">
-										<a href="#">Подключиться</a>
+										<a href="#" class="connectBtn" data-name="registerForm">Подключиться</a>
 									</div>
 									<div class="flexItem priceBlock noneMob">
-										<a href="#">Подключиться</a>
+										<a href="#" class="connectBtn" data-name="registerForm">Подключиться</a>
 									</div>
 									<div class="flexItem priceBlock">
-										<a href="#">Подключиться</a>
+										<a href="#" class="connectBtn" data-name="registerForm">Подключиться</a>
 									</div>
 								</div>
 							</div>
@@ -1562,13 +1561,13 @@
 								<div class="flexWrapper alignMiddle">
 									<div class="flexItem nameRow noneMob"></div>
 									<div class="flexItem priceBlock noneMob">
-										<a href="#">Подключиться</a>
+										<a href="#" class="connectBtn" data-name="registerForm">Подключиться</a>
 									</div>
 									<div class="flexItem priceBlock noneMob">
-										<a href="#">Подключиться</a>
+										<a href="#" class="connectBtn" data-name="registerForm">Подключиться</a>
 									</div>
 									<div class="flexItem priceBlock">
-										<a href="#">Подключиться</a>
+										<a href="#" class="connectBtn" data-name="registerForm">Подключиться</a>
 									</div>
 								</div>
 							</div>
@@ -1576,6 +1575,138 @@
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+</div>
+<div class="modalFormBlock flexWrapper alignMiddle">
+	<div class="loginForm item">
+		<div class="headerForm">
+			<div class="titleBlock">
+				Вход
+			</div>
+			<div class="closeBtn">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 24.02">
+					<path d="M0 1.02l1-1 11.5 11.51L24 .02l1 1L13.47 12.5 24 23.02l-1 1-10.5-10.56L1.94 24.02l-.94-1L11.53 12.5z"/>
+				</svg>
+			</div>
+		</div>
+		<div class="contentForm">
+			<form class="form">
+				<div class="formGroup">
+					<label for="emailLog">Электронная почта</label>
+					<input type="email" class="formControl" id="emailLog">
+				</div>
+				<div class="formGroup">
+					<label for="passLog">Пароль</label>
+					<input type="password" class="formControl" id="passLog" >
+				</div>
+				<div class="submitGroup flexWrapper justifyContent alignMiddle">
+					<input type="submit" class="submitBtn" value="Войти">
+					<a href="#" class="formLink">
+						Забыли пароль?
+					</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="askQuestionForm item">
+		<div class="headerForm">
+			<div class="titleBlock">
+				Задать вопрос
+			</div>
+			<div class="closeBtn">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 24.02">
+					<path d="M0 1.02l1-1 11.5 11.51L24 .02l1 1L13.47 12.5 24 23.02l-1 1-10.5-10.56L1.94 24.02l-.94-1L11.53 12.5z"/>
+				</svg>
+			</div>
+		</div>
+		<div class="contentForm">
+			<form class="form">
+				<div class="formGroup flexWrapper justifyContent">
+					<label for="addressQuest">Кому адресовать</label>
+					<select id="addressQuest" class="formControl">
+						<option value="technicalSupport">Техническая поддержка 1</option>
+						<option value="technicalSupport">Техническая поддержка 2</option>
+						<option value="technicalSupport">Техническая поддержка 3</option>
+						<option value="technicalSupport">Техническая поддержка 4</option>
+						<option value="technicalSupport">Техническая поддержка 5</option>
+						<option value="technicalSupport">Техническая поддержка 6</option>
+					</select>
+				</div>
+				<div class="formGroup flexWrapper justifyContent">
+					<label for="nameQuest">Имя</label>
+					<input type="text" class="formControl" id="nameQuest" >
+				</div>
+				<div class="formGroup flexWrapper justifyContent">
+					<label for="emailQuest">Email</label>
+					<input type="text" class="formControl" id="emailQuest" >
+				</div>
+				<div class="formGroup flexWrapper justifyContent">
+					<label for="phoneQuest">Телефон</label>
+					<input type="text" class="formControl" id="phoneQuest" >
+				</div>
+				<div class="formGroup flexWrapper justifyContent">
+					<label for="textQuest">Опишите вопрос</label>
+					<textarea name="" id="textQuest" class="formControl textArea"></textarea>
+				</div>
+				<div class="submitGroup flexWrapper centerContent">
+					<input type="submit" class="submitBtn" value="Отправить">
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="registerForm item">
+		<div class="headerForm">
+			<div class="titleBlock">
+				Заявка на подключение
+			</div>
+			<div class="closeBtn">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 24.02">
+					<path d="M0 1.02l1-1 11.5 11.51L24 .02l1 1L13.47 12.5 24 23.02l-1 1-10.5-10.56L1.94 24.02l-.94-1L11.53 12.5z"/>
+				</svg>
+			</div>
+		</div>
+		<div class="contentForm">
+			<form class="form">
+				<div class="formGroup flexWrapper justifyContent">
+					<label for="planRegister">Тарифный план</label>
+					<select id="planRegister" class="formControl">
+						<option value="technicalSupport">Mini</option>
+						<option value="technicalSupport">Standard</option>
+						<option value="technicalSupport">Premium</option>
+					</select>
+				</div>
+				<div class="formGroup flexWrapper justifyContent">
+					<label for="nameRegister">Имя</label>
+					<input type="text" class="formControl" id="nameRegister" >
+				</div>
+				<div class="formGroup flexWrapper justifyContent">
+					<label for="cityRegister">Город</label>
+					<input type="text" class="formControl" id="cityRegister" >
+				</div>
+				<div class="formGroup flexWrapper justifyContent">
+					<label for="kActivityRegister">Вид деятельности</label>
+					<input type="text" class="formControl" id="kActivityRegister" >
+				</div>
+				<div class="formGroup flexWrapper justifyContent">
+					<label for="emailRegister">Email</label>
+					<input type="text" class="formControl" id="emailRegister" >
+				</div>
+				<div class="formGroup flexWrapper justifyContent">
+					<label for="phoneRegister">Телефон</label>
+					<input type="text" class="formControl" id="phoneRegister" >
+				</div>
+				<div class="formGroup flexWrapper justifyContent">
+					<label for="wherePhoneRegister">Когда вам позвонить?</label>
+					<input type="text" class="formControl" id="wherePhoneRegister">
+				</div>
+				<div class="agreeSentForm">
+					Отправляя сведения через электронную форму, вы соглашаетесь с условиями Оферты и даете согласие на обработку, сбор, хранение и передачу третьим лицам представленной вами информации на условиях Политики конфиденциальности.
+				</div>
+				<div class="submitGroup flexWrapper centerContent">
+					<input type="submit" class="submitBtn" value="Подключиться">
+				</div>
+			</form>
 		</div>
 	</div>
 </div>

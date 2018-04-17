@@ -451,4 +451,45 @@
 	.howItWorks .secondStep .loudspeaker.right .content br{
 		display: none;
 	}
+	.modalFormBlock{
+		padding: 23px 23px 0 23px;
+	}
+	.modalFormBlock .item{
+		width: 100%;
+	}
+	.modalFormBlock .headerForm{
+		padding:0 0 0 12px;
+		margin-bottom: 19px;
+	}
+	.modalFormBlock .headerForm .titleBlock{
+		font-size: 16px;
+		margin-bottom: 20px;
+	}
+	.modalFormBlock .headerForm .closeBtn{
+		width: 24px;
+		right: 8px;
+		fill: #fff;
+		opacity: 1;
+	}
+	.modalFormBlock .contentForm{
+		margin-bottom: 23px;
+		padding: 0 8px;
+	}
+	.modalFormBlock .formGroup{
+		flex-wrap: wrap;
+		margin-bottom: 15px;
+	}
+	.modalFormBlock label{
+		width: 100%;
+	}
+	.modalFormBlock .formControl{
+		width: 100% !important;
+		height: 32px;
+		font-size: 12px;
+		padding-left: 13px;
+	}
+	.modalFormBlock .submitBtn{
+		font-size: 9px;
+		padding: 10px 30px;
+	}
 }
