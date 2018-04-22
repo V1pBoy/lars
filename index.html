@@ -12,6 +12,48 @@
 	<link rel="stylesheet" href="assets/includes/css/style.css">
 	<link rel="stylesheet" href="assets/includes/css/style_tablet.css">
 	<link rel="stylesheet" href="assets/includes/css/style_mob.css">
+	<style>
+		.firstScreen{
+
+		}
+		.firstScreen .items{
+			transition: opacity 500ms;
+			opacity: .5;
+			cursor: pointer;
+			flex-basis: calc((100% - 500px)/6);
+			text-align: center;
+		}
+		.firstScreen .fadeOut{
+			opacity: 0;
+		}
+		.firstScreen .player{
+			height: 505px;
+			flex-basis: 505px;
+			border-radius: 500px;
+			border:1px solid #fff;
+			text-align: center;
+		}
+		.navigationPlayer .item{
+			padding: 0 10px;
+			cursor: pointer;
+		}
+		.progressMusic{
+			width: 316px;
+			height: 1px;
+			background: rgba(255,255,255,0.25);
+			margin: 25px auto;
+			position: relative;
+		}
+		.progressMusic .progressBar{
+			height: 3px;
+			width: 0;
+			background: #fff;
+			position: absolute;
+			left: 0;
+			top: -1px;
+			transition: width 100ms;
+		}
+	</style>
 </head>
 <body>
 <div class="socialLinksSvg">
@@ -107,7 +149,38 @@
 		</div>
 	</div>
 </header>
-<div class="firstBlock" style="height:987px; width: 100%; background:url(assets/img/bgFirstBlock.jpg) no-repeat"></div>
+<div class="firstScreen" style="height:987px; width: 100%; background:url(assets/img/bgFirstBlock.jpg) no-repeat">
+	<div class="flexWrapper justifyContent justifyContent alignMiddle">
+		<div class="items"></div>
+		<div class="items"></div>
+		<div class="items"></div>
+		<div class="player">
+			<div class="logoItem">
+				<img src="" alt="">
+			</div>
+			<div class="titleItem"></div>
+			<div class="progressMusic">
+				<div class="progressBar"></div>
+			</div>
+			<div class="navigationPlayer">
+				<div class="flexWrapper centerContent">
+					<div class="item prev">Prev</div>
+					<div class="item">
+						<div class="play">Play</div>
+						<div class="pause">Pause</div>
+					</div>
+					<div class="item next">Next</div>
+				</div>
+			</div>
+		</div>
+		<div class="items"></div>
+		<div class="items"></div>
+		<div class="items"></div>
+	</div>
+	<div class="mute" data-mute="false">
+		GOOGLE
+	</div>
+</div>
 <div class="ourClients">
 	<div class="scrollBlock">
 		<div class="container">

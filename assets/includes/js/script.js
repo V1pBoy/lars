@@ -337,6 +337,252 @@ $(function () {
         });
     })
 });
+$(function () {
+    var positionCenter = 3;
+    var arr = [
+        {
+            categoryBar: "totalCategory",
+            backgroundImg: "background.jpeg",
+            items:[
+                {
+                    name:"MAMAN",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"FRAPOLLI",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"AZUMA",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"M1 Club Hotel",
+                    audioTrack:"assets/music/blackBacardi.mp3",
+                    logo: "assets/img/shape-6.png"
+                },
+                {
+                    name:"BRISTOL",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"GASTROBAR",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"CORVIN",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Тетя-Мотя",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Одесское профессиональное училище железнодорожного транспорта и строительства",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Компот",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Одесский Профессиональный Лицей Строительства И Архитектуры Государственный Профессионально-техническое Учебное Заведение",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Кафе Фанкони",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Traveler`s Coffee",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Алхимия",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"КлараБара",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Одесская государственная академия строительства и архитектуры",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Tavernetta",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Фрателли",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Стейкхаус. Мясо и Вино",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Одесский национальный морской университет",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Альпина",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Национальный университет «Одесская морская академия»",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Buffalo 99",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Бернардацци",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Бремен",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Тюлька",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Make my Cake",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"ОГАУ Корпус#1",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Жето",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Sophie Cafe",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Дача",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Гоголь-Моголь",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Одесский национальный политехнический университет",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Terrace. Sea View",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                },
+                {
+                    name:"Братья Гриль",
+                    audioTrack:"awdawdawd.mp3",
+                    logo: "wdadwawd.png"
+                }
+            ]
+        }
+    ];
+    var arrLength=arr[0].items.length;
+    var audioPlay = new Audio (arr[0].items[3].audioTrack);
+    audioPlay.play();
+    audioPlay.addEventListener('timeupdate',function (){
+        var curtime = parseInt(audioPlay.currentTime, 10);
+        console.log(curtime);
+        $(".progressBar").width(curtime/audioPlay.duration*100+"%");
+    });
+    $(".firstScreen .items").each(function () {
+        $(this).attr("data-value", $(this).index()).text(arr[0].items[$(this).index()].name)
+    });
+    $(".firstScreen .player .logoItem img").attr("src",arr[0].items[3].logo);
+    $(".firstScreen .player .titleItem").text(arr[0].items[3].name);
+    $(".firstScreen .pause").on("click touch", function () {
+        audioPlay.pause();
+    });
+    $(".firstScreen .play").on("click touch", function () {
+        audioPlay.play();
+    });
+    $(".firstScreen .mute").on("click touch", function () {
+        var stateMute = $(this).data("mute");
+        if(stateMute === false){
+            audioPlay.muted = true;
+            $(this).data("mute",true);
+        }else{
+            audioPlay.muted = false;
+            $(this).data("mute",false);
+        }
+
+    });
+    $(".firstScreen .items").on("click", function () {
+        audioPlay.pause();
+        audioPlay.currentTime=0;
+        var bias = $(this).index()-positionCenter;
+        var eachDataPositionElemnts;
+        var peremennaya;
+        $(".firstScreen .player .logoItem img").attr("src",arr[0].items[$(this).index()].logo);
+        $(".firstScreen .player .titleItem").text(arr[0].items[$(this).index()].name);
+        audioPlay = new Audio (arr[0].items[$(this).index()].audioTrack);
+        audioPlay.play();
+        $(".firstScreen .items").addClass("fadeOut");
+        setTimeout(function () {
+            $(".firstScreen .items").each(function () {
+                var items = $(this);
+                eachDataPositionElemnts = $(this).data("value");
+                if (eachDataPositionElemnts+bias >= arrLength){
+                    peremennaya = eachDataPositionElemnts+bias-arrLength;
+                }else if(eachDataPositionElemnts+bias<=arrLength+(eachDataPositionElemnts+bias)){
+                    peremennaya = arrLength+(eachDataPositionElemnts+bias);
+                    if (peremennaya>=arrLength){
+                        peremennaya = arrLength+(eachDataPositionElemnts+bias-arrLength);
+                    }
+                }
+                else{
+                    peremennaya = eachDataPositionElemnts+bias;
+                }
+                items.data("value",peremennaya).attr("data-value",peremennaya).text(arr[0].items[peremennaya].name).removeClass("fadeOut");
+            });
+        }, 500);
+    });
+});
 //    canvas Script
 var canvas = document.getElementById('nokey'),
     can_w = parseInt(canvas.getAttribute('width')),
