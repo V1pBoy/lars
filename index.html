@@ -13,8 +13,9 @@
 	<link rel="stylesheet" href="assets/includes/css/style_tablet.css">
 	<link rel="stylesheet" href="assets/includes/css/style_mob.css">
 	<style>
-		.firstScreen{
-
+		.firstScreen .playerList{
+			padding-top: 232px;
+			margin-bottom: 87px;
 		}
 		.firstScreen .items{
 			transition: opacity 500ms;
@@ -32,16 +33,60 @@
 			border-radius: 500px;
 			border:1px solid #fff;
 			text-align: center;
+			padding-top: 117px;
+		}
+		.firstScreen .player .logoItem{
+			margin-bottom: 40px;
+			min-height: 85px;
+		}
+		.firstScreen .player .logoItem img{
+			transition: opacity 500ms;
+		}
+		.firstScreen .player .titleItem{
+			font-size: 20px;
+			text-transform: uppercase;
+			margin-bottom: 60px;
+			min-height: 25px;
+			transition: opacity 500ms;
+		}
+		.navigationPlayer{
+			width: 129px;
+			margin: 0 auto 40px;
 		}
 		.navigationPlayer .item{
 			padding: 0 10px;
 			cursor: pointer;
 		}
+		.navigationPlayer .next svg,
+		.navigationPlayer .prev svg{
+			fill: #fff;
+			width:13px;
+			height:13px;
+		}
+		.navigationPlayer .pause svg{
+			width: 14px;
+			height: 19px;
+			fill: #fff;
+		}
+		.navigationPlayer .play svg{
+			width: 14px;
+			height: 19px;
+			fill: #fff;
+		}
+		.navigationPlayer .playPause.paused .play{
+			display: none;
+		}
+		.navigationPlayer .playPause .pause{
+			display: none;
+		}
+		.navigationPlayer .playPause.paused .pause{
+			display: block;
+		}
 		.progressMusic{
 			width: 316px;
 			height: 1px;
 			background: rgba(255,255,255,0.25);
-			margin: 25px auto;
+			margin:0 auto 60px;
 			position: relative;
 		}
 		.progressMusic .progressBar{
@@ -51,7 +96,80 @@
 			position: absolute;
 			left: 0;
 			top: -1px;
-			transition: width 100ms;
+		}
+		.firstScreen .reviewForm{
+			cursor: pointer;
+			text-align: center;
+			font-size: 12px;
+			opacity: .5;
+			font-family: "museo300";
+		}
+		.firstScreen .tryBlock{
+			text-align: center;
+			font-size: 12px;
+			font-family: "museo500";
+		}
+		.firstScreen .tryBlock .btnBlock{
+			padding: 7px 35px;
+			color: #0c0d0d;
+			background-color: #ffffff;
+			border-radius: 2px;
+			display: inline-block;
+			cursor: pointer;
+			margin-bottom: 15px;
+		}
+		.firstScreen .tryBlock .btnBlock .bigText{
+			text-transform: uppercase;
+		}
+		.firstScreen .tryBlock .btnBlock .smallText{
+			margin-top: 2px;
+			font-size: 8px;
+		}
+		.firstScreen .tryBlock .linkBlock{
+			font-family: "museo300";
+		}
+		.firstScreen .tryBlock .linkBlock a{
+			display: inline-block;
+			font-family: "museo700";
+			color: #fff;
+			text-decoration: underline;
+		}
+		.firstScreen .mute{
+			width: 65px;
+			height: 43px;
+			font-size: 8px;
+			color: #90908f;
+			text-align: center;
+			cursor: pointer;
+		}
+		.firstScreen .mute .title{
+			margin-top: 10px;
+		}
+		.firstScreen .mute .muteSvg{
+			display: none;
+		}
+		.firstScreen .mute .svgBlock.true .unmuteSvg{
+			display: none;
+		}
+		.firstScreen .mute .svgBlock.true .muteSvg{
+			display: block;
+			top: -3px;
+			position: relative;
+		}
+		.firstScreen .mute .svgBlock{
+			width: 26px;
+			height: 20px;
+			margin: 0 auto;
+			fill: #a9a9a9;
+			transition: width 300ms, height 300ms;
+		}
+		.firstScreen .mute:hover .svgBlock{
+			width: 40px;
+			height: 43px;
+			fill:#ff2e52;
+		}
+		.firstScreen .mute:hover .title{
+			opacity: 0;
 		}
 	</style>
 </head>
@@ -116,22 +234,22 @@
 					</div>
 					<ul class="listMenu">
 						<li class="inlineBlock">
-							<a href="#">Нам доверяют</a>
+							<a href="#ourClients">Нам доверяют</a>
 						</li>
 						<li class="inlineBlock">
-							<a href="#">Как это работает</a>
+							<a href="#howItWorks">Как это работает</a>
 						</li>
 						<li class="inlineBlock">
-							<a href="#">Тарифы</a>
+							<a href="#priceBlock">Тарифы</a>
 						</li>
 						<li class="inlineBlock">
 							<a href="#">Услуги</a>
 						</li>
 						<li class="inlineBlock">
-							<a href="#">Команда</a>
+							<a href="#ourTeamBlock">Команда</a>
 						</li>
 						<li class="inlineBlock">
-							<a href="#">Контакты</a>
+							<a href="#contactUsBlock">Контакты</a>
 						</li>
 					</ul>
 					<div class="loginBtn">
@@ -149,39 +267,85 @@
 		</div>
 	</div>
 </header>
-<div class="firstScreen" style="height:987px; width: 100%; background:url(assets/img/bgFirstBlock.jpg) no-repeat">
-	<div class="flexWrapper justifyContent justifyContent alignMiddle">
-		<div class="items"></div>
-		<div class="items"></div>
-		<div class="items"></div>
-		<div class="player">
-			<div class="logoItem">
-				<img src="" alt="">
-			</div>
-			<div class="titleItem"></div>
-			<div class="progressMusic">
-				<div class="progressBar"></div>
-			</div>
-			<div class="navigationPlayer">
-				<div class="flexWrapper centerContent">
-					<div class="item prev">Prev</div>
-					<div class="item">
-						<div class="play">Play</div>
-						<div class="pause">Pause</div>
+<div id="playerScreen" class="firstScreen" style="height:987px; width: 100%; background:url(assets/img/bgFirstBlock.jpg) no-repeat">
+	<div class="playerList">
+		<div class="flexWrapper justifyContent justifyContent alignMiddle">
+			<div class="items"></div>
+			<div class="items"></div>
+			<div class="items"></div>
+			<div class="player">
+				<div class="logoItem">
+					<img src="" alt="">
+				</div>
+				<div class="titleItem"></div>
+				<div class="progressMusic">
+					<div class="progressBar"></div>
+				</div>
+				<div class="navigationPlayer">
+					<div class="flexWrapper justifyContent alignMiddle">
+						<div class="item prev">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13">
+								<path d="M3 13H0V0h3zM13 1v11L4 6.51z"/>
+							</svg>
+						</div>
+						<div class="item playPause paused">
+							<div class="play">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 384">
+									<path d="M309.2 168.9L30.8 3.2A21 21 0 0 0 19.9 0 20 20 0 0 0 .1 20H0v344h.1a20 20 0 0 0 19.8 20c4.1 0 7.5-1.4 11.2-3.4l278.1-165.5a30.1 30.1 0 0 0 0-46.2z"/>
+								</svg>
+							</div>
+							<div class="pause">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 19">
+									<path d="M0 0h4v19H0zm10 0h4v19h-4z"/>
+								</svg>
+							</div>
+						</div>
+						<div class="item next">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.01 13">
+								<path d="M10.01 0h3v13h-3zm-1 6.5l-9 5.5V1z"/>
+							</svg>
+						</div>
 					</div>
-					<div class="item next">Next</div>
+				</div>
+				<div class="reviewForm" data-name="askQuestionForm">
+					Отзыв
 				</div>
 			</div>
+			<div class="items"></div>
+			<div class="items"></div>
+			<div class="items"></div>
 		</div>
-		<div class="items"></div>
-		<div class="items"></div>
-		<div class="items"></div>
 	</div>
-	<div class="mute" data-mute="false">
-		GOOGLE
+	<div class="container">
+		<div class="tryBlock">
+			<div class="btnBlock">
+				<div class="bigText">
+					Попробовать
+				</div>
+				<div class="smallText">
+					бесплатно 14 дней
+				</div>
+			</div>
+			<div class="linkBlock">
+				или <a href="#">подключиться</a>
+			</div>
+		</div>
+		<div class="mute" data-mute="false">
+			<div class="svgBlock">
+				<svg class="unmuteSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.15 19.96">
+					<path d="M25.15 10a10.23 10.23 0 0 1-7.74 9.94c-.72.18-1-1-.3-1.15A9 9 0 0 0 17 1.17c-.73-.17-.42-1.33.3-1.15A10.3 10.3 0 0 1 25.15 10zm-8.21-3.58c-.64-.38-.06-1.42.59-1a5.28 5.28 0 0 1 0 9.16c-.67.38-1.23-.66-.6-1a4.05 4.05 0 0 0 0-7.08zm-2.74-5v17.13a1.4 1.4 0 0 1-.64 1.3 1.16 1.16 0 0 1-.5.11 1.53 1.53 0 0 1-.9-.35l-5.67-4.23a4.57 4.57 0 0 0-2.18-.72H2a2 2 0 0 1-2-2V7.37a2.06 2.06 0 0 1 .56-1.44A1.9 1.9 0 0 1 2 5.32h2.33a4.63 4.63 0 0 0 2.18-.72L12.18.36a1.25 1.25 0 0 1 1.4-.23 1.32 1.32 0 0 1 .61 1.3zM4.34 13.48a3.63 3.63 0 0 1 .78.08V6.44a4 4 0 0 1-.78.09H2a.83.83 0 0 0-.56.23.82.82 0 0 0-.22.58l.06 5.3a.82.82 0 0 0 .8.84zm8.77 5.07V1.4a1.46 1.46 0 0 0 0-.2l-.2.11-5.73 4.24a3.8 3.8 0 0 1-.91.52v7.84a4.08 4.08 0 0 1 .92.52l5.67 4.2a.29.29 0 0 0 .2.12.45.45 0 0 0 0-.2z"/>
+				</svg>
+				<svg class="muteSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.41 25.82">
+					<path d="M25 13.41a10.22 10.22 0 0 1-7.7 10c-.72.18-1-1-.3-1.15A9.08 9.08 0 0 0 21.7 7.6l.82-.82A10.4 10.4 0 0 1 25 13.41zm-8.11-8.8a.618.618 0 0 1 .3-1.2 9.7 9.7 0 0 1 2.17.79l-.9.9a8.8 8.8 0 0 0-1.57-.54zm.53 13.4a.6.6 0 0 1-.59-1 4.06 4.06 0 0 0 1.35-5.88l.82-.92a5.33 5.33 0 0 1-1.61 7.77zm-3.3-13.17v4.63L13 10.55V4.61l-.2.12-5.66 4.24a3.87 3.87 0 0 1-.92.52v7.86l-.93.93a3.6 3.6 0 0 0-1-.18H2a2 2 0 0 1-2-2v-5.29a2.06 2.06 0 0 1 .56-1.44 1.86 1.86 0 0 1 1.38-.6h2.37a4.6 4.6 0 0 0 2.16-.73l5.64-4.25a1.24 1.24 0 0 1 1.39-.23 1.32 1.32 0 0 1 .61 1.3zm0 17.16a1.4 1.4 0 0 1-.65 1.3 1.1 1.1 0 0 1-.47.11 1.5 1.5 0 0 1-.89-.34l-3.37-2.54.85-.85 3.22 2.4a.31.31 0 0 0 .2.12.45.45 0 0 0 0-.2v-5.79l1.08-1.08zm-9.81-5.09a3 3 0 0 1 .77.1V9.87a3.66 3.66 0 0 1-.77.08H1.94a.84.84 0 0 0-.55.24.82.82 0 0 0-.22.57l.05 5.32a.82.82 0 0 0 .8.83zM25.59 0l.82.82-25 25L.59 25z"/>
+				</svg>
+			</div>
+			<div class="title">
+				Выключить звук
+			</div>
+		</div>
 	</div>
 </div>
-<div class="ourClients">
+<div id="ourClients" class="ourClients">
 	<div class="scrollBlock">
 		<div class="container">
 			<div class="titleBlock">
@@ -726,7 +890,7 @@
 		</div>
 	</div>
 </div>
-<div class="howItWorks">
+<div id="howItWorks" class="howItWorks">
 	<div class="scrollBlock">
 		<div class="container">
 			<div class="titleBlock">
@@ -864,7 +1028,7 @@
 		</div>
 	</div>
 </div>
-<div class="pricesBlock">
+<div id="priceBlock" class="pricesBlock">
 	<div class="tabNav">
 		<div class="item inlineBlock active" data-name-price="imageBlock">
 			имиджевая
@@ -1004,7 +1168,7 @@
 		</div>
 	</div>
 </div>
-<div class="ourTeamBlock">
+<div id="ourTeamBlock" class="ourTeamBlock">
 	<div class="whiteBlock">
 		<div class="container">
 			<div class="contentBlock">
@@ -1095,7 +1259,7 @@
 		<a href="#" class="inlineBlock">Задать вопрос</a>
 	</div>
 </div>
-<div class="featuresBlock">
+<div id="featuresBlock" class="featuresBlock">
 	<div class="container">
 		<div class="titleBlock">
 			Что мы дополнительно можем
@@ -1170,7 +1334,7 @@
 		</div>
 	</div>
 </div>
-<div class="contactUsBlock">
+<div id="contactUsBlock" class="contactUsBlock">
 	<canvas id="nokey">
 		Your Browser Don't Support Canvas, Please Download Chrome ^_^``
 	</canvas>
