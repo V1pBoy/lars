@@ -367,7 +367,7 @@ $(function () {
 				},
 				{
 					name: "M1 Club Hotel",
-					audioTrack: "assets/music/blackBacardi.mp3",
+					audioTrack: "asset/music/blackBacardi.mp3",
 					logo: "assets/img/shape-6.png"
 				},
 				{
@@ -912,11 +912,33 @@ $(function () {
 });
 $(function () {
 	var headerBlock = $(".headerBlock");
+    var windowWidth = $(window).width();
+    $(window).resize(function () {
+    	windowWidth = $(document).width();
+    });
 	headerBlock.find(".listMenu a").click(function(e) {
 		e.preventDefault();
 		var section = $(this).attr("href");
+        var offsetTopBlock = 0;
+        if(windowWidth >= 1200){
+            if(section==="#ourClients")	{
+                offsetTopBlock = ourClientsAnimationDuration;
+            }
+            else if(section==="#howItWorks"){
+                if($(".headerBlock").offset().top >= $(".howItWorks").offset().top || $("#ourClients").offset().top <=  $(".headerBlock").offset().top){
+                    offsetTopBlock = ourHowItWorksAnimationDuration;
+                }else{
+                    offsetTopBlock = ourHowItWorksAnimationDuration + 1800;
+                }
+            }else{
+				offsetTopBlock=0;
+            }
+		}else{
+            offsetTopBlock = 0;
+		}
+
 		$("html, body").animate({
-			scrollTop: $(section).offset().top + ourClientsAnimationDuration +1000
+			scrollTop: $(section).offset().top + offsetTopBlock
 		});
 	});
 	$(window).on("scroll", function () {
