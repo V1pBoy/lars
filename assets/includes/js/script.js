@@ -340,15 +340,18 @@ $(function () {
 		nextBtn: playerBlock.find(".next"),
 		prevBtn: playerBlock.find(".prev"),
 		muteBtn: firstScreen.find(".mute .svgBlock"),
-		progressBlock:playerBlock.find(".progressBar")
+		progressBlock:playerBlock.find(".progressBar"),
+		categoryPlayer:playerBlock.find(".category .item")
 	};
 	var bias;
+	var dataItemValue;
 	var eachDataPositionElemnts;
-	var peremennaya;
+	var categoryIndex = 0;
 	var arr = [
 		{
 			categoryBar: "totalCategory",
-			backgroundImg: "background.jpeg",
+			backgroundImg: "assets/img/bgFirstBlock.jpg",
+			nameCategory: "GOOD AND BEAUTY",
 			items: [
 				{
 					name: "MAMAN",
@@ -526,16 +529,120 @@ $(function () {
 					logo: "wdadwawd.png"
 				}
 			]
+		},
+		{
+			categoryBar: "fashionRetail",
+			backgroundImg: "assets/img/911825525_preview_2.jpg",
+			nameCategory: "FASHION & RETAIL",
+			items: [
+				{
+					name: "MAMAN1",
+					audioTrack: "awdawdawd.mp3",
+					logo: "wdadwawd.png"
+				},
+				{
+					name: "FRAPOLLI1",
+					audioTrack: "awdawdawd.mp3",
+					logo: "wdadwawd.png"
+				},
+				{
+					name: "AZUMA1",
+					audioTrack: "awdawdawd.mp3",
+					logo: "wdadwawd.png"
+				},
+				{
+					name: "M1 Club Hotel1",
+					audioTrack: "asset/music/blackBacardi.mp3",
+					logo: "assets/img/shape-6.png"
+				},
+				{
+					name: "BRISTOL1",
+					audioTrack: "assets/music/fury-road.mp3",
+					logo: "assets/img/shape-6.png"
+				},
+				{
+					name: "GASTROBAR1",
+					audioTrack: "awdawdawd.mp3",
+					logo: "wdadwawd.png"
+				},
+				{
+					name: "CORVIN1",
+					audioTrack: "awdawdawd.mp3",
+					logo: "wdadwawd.png"
+				},
+				{
+					name: "Тетя-Мотя1",
+					audioTrack: "awdawdawd.mp3",
+					logo: "wdadwawd.png"
+				},
+				{
+					name: "Одесское профессиональное училище железнодорожного транспорта и строительства1",
+					audioTrack: "awdawdawd.mp3",
+					logo: "wdadwawd.png"
+				}
+			]
+		},
+		{
+			categoryBar: "HEALTH & BEAUTY",
+			backgroundImg: "assets/img/downloaded.jpg",
+			nameCategory: "HEALTH & BEAUTY",
+			items: [
+				{
+					name: "MAMAN2",
+					audioTrack: "awdawdawd.mp3",
+					logo: "wdadwawd.png"
+				},
+				{
+					name: "FRAPOLLI2",
+					audioTrack: "awdawdawd.mp3",
+					logo: "wdadwawd.png"
+				},
+				{
+					name: "AZUMA2",
+					audioTrack: "awdawdawd.mp3",
+					logo: "wdadwawd.png"
+				},
+				{
+					name: "M1 Club Hotel2",
+					audioTrack: "assets/music/blackBacardi.mp3",
+					logo: "assets/img/shape-6.png"
+				},
+				{
+					name: "BRISTOL2",
+					audioTrack: "assets/music/fury-road.mp3",
+					logo: "assets/img/shape-6.png"
+				},
+				{
+					name: "GASTROBAR2",
+					audioTrack: "awdawdawd.mp3",
+					logo: "wdadwawd.png"
+				},
+				{
+					name: "CORVIN2",
+					audioTrack: "awdawdawd.mp3",
+					logo: "wdadwawd.png"
+				},
+				{
+					name: "Тетя-Мотя2",
+					audioTrack: "awdawdawd.mp3",
+					logo: "wdadwawd.png"
+				},
+				{
+					name: "Одесское профессиональное училище железнодорожного транспорта и строительства2",
+					audioTrack: "awdawdawd.mp3",
+					logo: "wdadwawd.png"
+				}
+			]
 		}
 	];
 	firstScreenItems.each(function () {
-		$(this).attr("data-value", $(this).index()).text(arr[0].items[$(this).index()].name)
+		$(this).attr("data-value", $(this).index()).text(arr[categoryIndex].items[$(this).index()].name)
 	});
-	var arrLength = arr[0].items.length;
+	var arrLength = arr[categoryIndex].items.length;
 	var audioPlay = new Audio(arr[0].items[playerIndex].audioTrack);
 	player();
-	playerItems.playerLogo.attr("src", arr[0].items[playerIndex].logo);
-	playerItems.playerTitle.text(arr[0].items[playerIndex].name);
+	playerItems.playerLogo.attr("src", arr[categoryIndex].items[playerIndex].logo);
+	playerItems.playerTitle.text(arr[categoryIndex].items[playerIndex].name);
 	playerItems.pauseBtn.on("click touch", function () {
 		audioPlay.pause();
 		$(this).parent().removeClass("paused");
@@ -559,9 +666,9 @@ $(function () {
 		audioPlay.pause();
 		audioPlay.currentTime = 0;
 		bias = $(this).parents(playerBlock).next().index() - playerIndex;
-		playerItems.playerLogo.addClass("fadeOut").attr("src", arr[0].items[$(this).parents(".player").next().data("value")].logo);
-		playerItems.playerTitle.addClass("fadeOut").text(arr[0].items[$(this).parents(".player").next().data("value")].name);
-		audioPlay = new Audio(arr[0].items[$(this).parents(".player").next().data("value")].audioTrack);
+		playerItems.playerLogo.addClass("fadeOut").attr("src", arr[categoryIndex].items[$(this).parents(".player").next().data("value")].logo);
+		playerItems.playerTitle.addClass("fadeOut").text(arr[categoryIndex].items[$(this).parents(".player").next().data("value")].name);
+		audioPlay = new Audio(arr[categoryIndex].items[$(this).parents(".player").next().data("value")].audioTrack);
 		setTimeout(function () {
 			playerItems.playerLogo.removeClass("fadeOut");
 			playerItems.playerTitle.removeClass("fadeOut");
@@ -576,6 +683,40 @@ $(function () {
 		playerItems.playerLogo.addClass("fadeOut").attr("src", arr[0].items[$(this).parents(".player").prev().data("value")].logo);
 		playerItems.playerTitle.addClass("fadeOut").text(arr[0].items[$(this).parents(".player").prev().data("value")].name);
 		audioPlay = new Audio(arr[0].items[$(this).parents(".player").prev().data("value")].audioTrack);
+		setTimeout(function () {
+			playerItems.playerLogo.removeClass("fadeOut");
+			playerItems.playerTitle.removeClass("fadeOut");
+			player();
+		}, 500);
+		changePlayerItem(bias);
+	});
+	playerItems.categoryPlayer.on("click touch",function () {
+		firstScreenItems.addClass("fadeOut");
+		categoryIndex = $(this).index();
+		firstScreen.css("background","url("+arr[categoryIndex].backgroundImg+")");
+		audioPlay = new Audio(arr[categoryIndex].items[playerIndex].audioTrack);
+		firstScreenItems.each(function () {
+			$(this).data("value", $(this).index()).text(arr[categoryIndex].items[$(this).index()].name).attr("data-value", $(this).index()).text(arr[categoryIndex].items[$(this).index()].name)
+		});
+		playerItems.playerLogo.addClass("fadeOut").attr("src", arr[categoryIndex].items[playerIndex].logo);
+		playerItems.playerTitle.addClass("fadeOut").text(arr[categoryIndex].items[playerIndex].name);
+		setTimeout(function () {
+			firstScreenItems.removeClass("fadeOut");
+			playerItems.playerLogo.removeClass("fadeOut");
+			playerItems.playerTitle.removeClass("fadeOut");
+			player();
+		}, 500);
+		$(this).addClass("active").siblings().removeClass("active");
+	});
+	firstScreenItems.on("click", function () {
+		dataItemValue = 0;
+		audioPlay.pause();
+		audioPlay.currentTime = 0;
+		bias = $(this).index() - playerIndex;
+		dataItemValue = $(this).data("value");
+		playerItems.playerLogo.addClass("fadeOut").attr("src", arr[categoryIndex].items[dataItemValue].logo);
+		playerItems.playerTitle.addClass("fadeOut").text(arr[categoryIndex].items[dataItemValue].name);
+		audioPlay = new Audio(arr[categoryIndex].items[dataItemValue].audioTrack);
 		setTimeout(function () {
 			playerItems.playerLogo.removeClass("fadeOut");
 			playerItems.playerTitle.removeClass("fadeOut");
@@ -600,10 +741,12 @@ $(function () {
 	}
 	function changePlayerItem(bias){
 		firstScreenItems.addClass("fadeOut");
+		var peremennaya = 0;
+		arrLength = arr[categoryIndex].items.length;
 		setTimeout(function () {
 			$(".firstScreen .items").each(function () {
 				var items = $(this);
-				eachDataPositionElemnts = $(this).data("value");
+				eachDataPositionElemnts = items.data("value");
 				if (eachDataPositionElemnts + bias >= arrLength) {
 					peremennaya = eachDataPositionElemnts + bias - arrLength;
 				} else if (eachDataPositionElemnts + bias <= arrLength + (eachDataPositionElemnts + bias)) {
@@ -615,24 +758,10 @@ $(function () {
 				else {
 					peremennaya = eachDataPositionElemnts + bias;
 				}
-				items.data("value", peremennaya).attr("data-value", peremennaya).text(arr[0].items[peremennaya].name).removeClass("fadeOut");
+				items.removeClass("fadeOut").data("value", peremennaya).attr("data-value", peremennaya).text(arr[categoryIndex].items[peremennaya].name);
 			});
 		}, 500);
 	}
-	firstScreenItems.on("click", function () {
-		audioPlay.pause();
-		audioPlay.currentTime = 0;
-		bias = $(this).index() - playerIndex;
-		playerItems.playerLogo.addClass("fadeOut").attr("src", arr[0].items[$(this).data("value")].logo);
-		playerItems.playerTitle.addClass("fadeOut").text(arr[0].items[$(this).data("value")].name);
-		audioPlay = new Audio(arr[0].items[$(this).data("value")].audioTrack);
-		setTimeout(function () {
-			playerItems.playerLogo.removeClass("fadeOut");
-			playerItems.playerTitle.removeClass("fadeOut");
-			player();
-		}, 500);
-		changePlayerItem(bias);
-	});
 });
 $(function () {
 	//    canvas Script

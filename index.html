@@ -34,6 +34,52 @@
 			border:1px solid #fff;
 			text-align: center;
 			padding-top: 117px;
+			position: relative;
+		}
+		.firstScreen .player .category .item{
+			font-size: 10px;
+			cursor: pointer;
+			position: absolute;
+		}
+		.firstScreen .player .category .item.active:before{
+			background-color: #e80000;
+		}
+		.firstScreen .player .category .item:before{
+			content: "";
+			position: absolute;
+			background-color: #ffffff;
+			width: 11px;
+			height: 11px;
+			border-radius: 22px;
+		}
+		.firstScreen .player .category .top{
+			left:0;
+			right: 0;
+			top:0;
+			padding-top: 15px;
+		}
+		.firstScreen .player .category .top:before{
+			top: -5px;
+			left: 50%;
+			margin-left: -6px;
+		}
+		.firstScreen .player .category .rightBottom{
+			bottom:90px;
+			right: -65px;
+			padding-left: 20px;
+		}
+		.firstScreen .player .category .rightBottom:before{
+			left: -3px;
+			bottom: 20px;
+		}
+		.firstScreen .player .category .leftBottom{
+			bottom:90px;
+			left: -65px;
+			padding-right: 20px;
+		}
+		.firstScreen .player .category .leftBottom:before{
+			right: -3px;
+			bottom: 20px;
 		}
 		.firstScreen .player .logoItem{
 			margin-bottom: 40px;
@@ -267,7 +313,7 @@
 		</div>
 	</div>
 </header>
-<div id="playerScreen" class="firstScreen" style="height:987px; width: 100%; background:url(assets/img/bgFirstBlock.jpg) no-repeat">
+<div id="playerScreen" class="firstScreen" style="width: 100%; background:url(assets/img/bgFirstBlock.jpg) no-repeat">
 	<div class="playerList">
 		<div class="flexWrapper justifyContent justifyContent alignMiddle">
 			<div class="items"></div>
@@ -309,6 +355,11 @@
 				</div>
 				<div class="reviewForm" data-name="askQuestionForm">
 					Отзыв
+				</div>
+				<div class="category">
+					<div class="item top active">GOOD AND BEAUTY</div>
+					<div class="item leftBottom">FASHION & RETAIL</div>
+					<div class="item rightBottom">HEALTH & BEAUTY</div>
 				</div>
 			</div>
 			<div class="items"></div>
