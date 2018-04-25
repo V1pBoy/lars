@@ -691,6 +691,8 @@ $(function () {
 		changePlayerItem(bias);
 	});
 	playerItems.categoryPlayer.on("click touch",function () {
+		audioPlay.pause();
+		audioPlay.currentTime = 0;
 		firstScreenItems.addClass("fadeOut");
 		categoryIndex = $(this).index();
 		firstScreen.css("background","url("+arr[categoryIndex].backgroundImg+")");

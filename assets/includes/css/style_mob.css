@@ -1,4 +1,26 @@
 @media (max-width: 767px){
+	.firstScreen{
+		overflow: hidden;
+		background-size: cover;
+		padding-top: 80px;
+		padding-bottom: 20px;
+	}
+	.firstScreen .playerList{
+		width: 768px;
+		position: relative;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+	.firstScreen .player .category .leftBottom{
+		bottom: 0;
+		left: -28px;
+		max-width: 77px;
+	}
+	.firstScreen .player .category .rightBottom{
+		bottom: 0;
+		right: -28px;
+		max-width: 77px;
+	}
 	.headerBlock .logoBlock{
 		width: 100%;
 	}
@@ -491,5 +513,8 @@
 	.modalFormBlock .submitBtn{
 		font-size: 9px;
 		padding: 10px 30px;
+	}
+	.ourClients .titleBlock{
+		padding-top: 30px!important;
 	}
 }

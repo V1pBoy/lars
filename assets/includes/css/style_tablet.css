@@ -1,4 +1,51 @@
 @media(max-width: 1199px){
+	.firstScreen{
+		padding-top: 150px;
+	}
+	.firstScreen .playerList{
+		margin-bottom: 50px;
+	}
+	.firstScreen .items{
+		flex-basis: calc((100% - 250px)/4);
+		max-width: calc((100% - 250px)/4);
+	}
+	.firstScreen .items:first-child,
+	.firstScreen .items:last-child{
+		display: none;
+	}
+	.firstScreen .player{
+		flex-basis: 250px;
+		max-width: 250px;
+		height: 250px;
+		padding-top: 40px;
+	}
+	.firstScreen .player .logoItem{
+		min-height: 55px;
+		margin-bottom: 15px;
+	}
+	.firstScreen .player .logoItem img{
+		max-height: 50px;
+	}
+	.firstScreen .player .titleItem{
+		font-size: 14px;
+		margin-bottom: 15px;
+	}
+	.firstScreen .progressMusic{
+		width: 150px;
+		margin-bottom: 20px;
+	}
+	.navigationPlayer{
+		margin-bottom: 10px;
+		width: 100px;
+	}
+	.firstScreen .player .category .leftBottom{
+		bottom: 30px;
+		left: -85px;
+	}
+	.firstScreen .player .category .rightBottom{
+		bottom: 30px;
+		right: -85px;
+	}
 	.superscrollorama-pin-spacer{
 		height: inherit!important;
 	}
